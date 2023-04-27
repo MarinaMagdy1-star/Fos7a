@@ -4,7 +4,7 @@
 $host = 'localhost'; 
 $username = 'root'; 
 $password = ''; 
-$dbname = 'outing_enhancment'; 
+$dbname = 'outing_enhancemnet'; 
 
 // Create a database connection
 $conn = mysqli_connect($host, $username, $password, $dbname);
