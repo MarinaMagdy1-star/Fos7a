@@ -19,6 +19,7 @@ if (isset($_POST['place_information'])){
          mysqli_close($conn);
    }
    ?>
+   
 
 <!DOCTYPE html>
 <html lang="en">
