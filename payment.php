@@ -2,13 +2,7 @@
 <html>
 
 <?php include("php-includes/head-tags.php"); ?>
-<head>
-<style>
-body{ 
-    background-image: url(b7819f964c37f48ddc33051aaca1cc94.jpg);
-}
-</style>
-</head>
+
 <body>
 
 <?php include("php-includes/navbar.php"); ?>
