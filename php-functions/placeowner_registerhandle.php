@@ -11,8 +11,8 @@ if (isset($_POST['user_login'])) {
     $result = mysqli_query($conn, $sql);
 
     $image_directory='poimages'; 
-$image_target=$image_directory.basename($image_name); 
-move_uploaded_file( $_FILES ['image']['tmp_name'],$image_target);
+    $image_target=$image_directory.basename($image_name); 
+    move_uploaded_file( $_FILES ['image']['tmp_name'],$image_target);
 
     if (mysqli_num_rows($result) == 1) {
         $placeowner = mysqli_fetch_assoc($result);
@@ -23,17 +23,17 @@ move_uploaded_file( $_FILES ['image']['tmp_name'],$image_target);
             $_SESSION['user_id'] = $placeowner['uid'];
             $_SESSION['email'] = $placeowner['email'];
             $_SESSION['name'] = $placeowner['name'];
-            header("Location: ../index.php");
+            header("Location: index.php");
             exit(); // terminate the script
         } 
         else {
             $_SESSION['error'] = "Wrong credentials.";
-            header("Location: ../login.php");
+            header("Location: login.php");
             exit(); // terminate the script
         }
     } else {
         $_SESSION['error'] = "Something went wrong please try again.";
-        header("Location: ../login.php");
+        header("Location: login.php");
         exit(); // terminate the script
     }
 }
