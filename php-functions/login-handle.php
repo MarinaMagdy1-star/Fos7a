@@ -31,3 +31,37 @@ if (isset($_POST['user_login'])) {
         exit(); // terminate the script
     }
 }
+if(isset($_POST['login_placeowner'])){
+        $email = $_POST['email'];
+        $password = $_POST['password']; // get the plain password
+        // $passwordHash = password_hash($_POST['password'], PASSWORD_DEFAULT);
+        // echo $passwordHash;
+        $sql = "SELECT * FROM `place_owner` WHERE `email` = '$email' AND `password`='$password'";
+        $result = mysqli_query($conn, $sql);
+    
+        $count = mysqli_num_rows($result); 
+        if (mysqli_num_rows($result) == 1) {
+            $placeowner = mysqli_fetch_assoc($result);
+        
+            
+            if ($count == 1) {
+                $_SESSION["placeowner"] = true;
+                $_SESSION['placeowner_id'] = $placeowner['pid'];
+                $_SESSION['email'] = $placeowner['email'];
+                $_SESSION['name'] = $placeowner['name'];
+                header("Location: place_information.php");
+                exit(); // terminate the script
+            } 
+            else {
+                $_SESSION['error'] = "Wrong credentials.";
+                header("Location: login.php");
+                exit(); // terminate the script
+            }
+        } else {
+            $_SESSION['error'] = "Something went wrong please try again.";
+            header("Location: login.php");
+            exit(); // terminate the script
+        }
+    
+
+}

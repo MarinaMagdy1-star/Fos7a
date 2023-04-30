@@ -28,39 +28,85 @@
                     <!-- Navigation Menu-->
                     <ul class="navigation-menu">
                         <li class="has-submenu parent-parent-menu-item">
-                            <a href="index.php">Home</a><span class="menu-arrow"></span>
+                            <a href="index.php">Home </a><span class="menu-arrow"></span>
                             
                            
 
                             <li class="has-submenu parent-parent-menu-item">
                             <a href="javascript:void(0)">Categories</a><span class="menu-arrow"></span>
+
                           <ul class="submenu">
-                            <li><a href="Touristic_Places.php" class="sub-menu-item">Touristic Places</a></a></li>
-                             <li><a href="Co_Working_Places.php" class="sub-menu-item">Co_Working Places</a></li>
+                            <?php 
+
+                            $categories_statement = "SELECT * FROM `categories`";
+                                $categories_query = mysqli_query($conn, $categories_statement) OR die('Error in places'.mysqli_error($conn)) ;
+                                ;
+                            // if(!$places_query){
+                            //     die('Error in places'.mysqli_error($con)) ;
+                            // }else{
+                            //     $places = mysqli_fetch_array($places_query);
+                            // }
+                            while( $category = mysqli_fetch_array($categories_query)){
+                            ?>
+                            <li><a href="places.php?category_id=<?php echo $category['cid'] ?>" class="sub-menu-item"><?php echo $category['type_of_place'] ?></a></a></li>
+                            <?php
+                            }
+                            ?>
+                             <!-- <li><a href="Co_Working_Places.php" class="sub-menu-item">Co_Working Places</a></li>
                              <li><a href="Adventure_Places.php" class="sub-menu-item">Adventure Places</a></li>
                              <li><a href="Restaurants&Cafes.php" class="sub-menu-item">Restaurants & Cafes</a></li>
-                        
+                         -->
                            </ul>
+                           <?php if(!isset($_SESSION['user_id'])) { ?>
+
+                           <li class="has-submenu parent-parent-menu-item">
+                               <a href="javascript:void(0)">Place Owners</a><span class="menu-arrow"></span>
+                               <ul class="submenu">
+                               <?php if(!isset($_SESSION['placeowner_id'])) { ?>
+
+                                   <li><a href="signUp_PlaceOwner.php" class="sub-menu-item">Sign Up</a></li>
+                                   <li><a href="login.php" class="sub-menu-item">Login</a></li>
+                                   <?php }else{ ?>
+                                       <li><a href="logout.php" class="sub-menu-item">Logout</a></li>
+                                       <?php } ?>
+
+                               </ul>
+                                <?php } ?>
+                        
 
                             <li class="has-submenu parent-parent-menu-item">
-                            <a href="javascript:void(0)">Place Owners</a><span class="menu-arrow"></span>
-                          <ul class="submenu">
-                            <li><a href="signUp_PlaceOwner.php" class="sub-menu-item">Sign Up</a></li>
-                             <li><a href="login.php" class="sub-menu-item">Login</a></li>
-                        
-                           </ul>
-                        
-
-                            <li class="has-submenu parent-parent-menu-item">
-                            <a href="About_Us.php">About Us</a>
+                            <a href="About_Us.php">About Us </a>
                             </li>
+                            <!-- <?php if(!isset($_SESSION['placeowner_id'])) { ?>
                             <li class="has-submenu parent-parent-menu-item">
                             <a href="register.php">Register</a>
                             </li>
                             <li class="has-submenu parent-parent-menu-item">
                             <a href="user_login.php">Login</a>
                             </li>
-                            
+                            <?php } ?> -->
+                            <?php if(isset($_SESSION['user_id'])) { ?>
+                            <li class="has-submenu parent-parent-menu-item">
+                            <a href="logout.php">Logout</a>
+                            </li>
+                            <?php }elseif(isset($_SESSION['placeowner_id'])){ ?>
+                                <li class="has-submenu parent-parent-menu-item">
+                            <a href="logout.php">Logout</a>
+                            </li>
+                            <?php }else{ ?>
+
+
+                            <li class="has-submenu parent-parent-menu-item">
+                               <a href="javascript:void(0)">Users</a><span class="menu-arrow"></span>
+                               <ul class="submenu">
+                                 <li><a href="register.php" class="sub-menu-item">Register</a></li>
+            
+                                 <li><a href="user_login.php" class="sub-menu-item">Login</a></li>
+                                    
+
+                               </ul>
+                               <?php } ?>
+                        
 
                 
 
