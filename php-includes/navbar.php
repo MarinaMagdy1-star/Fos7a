@@ -34,7 +34,7 @@
 
                             <li class="has-submenu parent-parent-menu-item">
                             <a href="javascript:void(0)">Categories</a><span class="menu-arrow"></span>
-                          <ul class="submenu">
+                    `   `        <ul class="submenu">
                             <li><a href="Touristic_Places.php" class="sub-menu-item">Touristic Places</a></a></li>
                              <li><a href="Co_Working_Places.php" class="sub-menu-item">Co_Working Places</a></li>
                              <li><a href="Adventure_Places.php" class="sub-menu-item">Adventure Places</a></li>
