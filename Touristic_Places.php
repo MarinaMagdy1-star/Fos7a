@@ -24,6 +24,7 @@ $places = mysqli_fetch_all($result,MYSQLI_ASSOC);
                     </div><!--end col-->
                 </div><!--end row-->
 
+             
 
                 <div class="row justify-content-center">
                 <?php foreach($places as $place) :?>
