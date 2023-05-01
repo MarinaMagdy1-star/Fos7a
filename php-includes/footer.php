@@ -6,10 +6,11 @@
                     <div class="col-12">
                         <div class="footer-py-60">
                             <div class="row justify-content-center">
-                                <div class="col-12 text-center">
+                                <div class="col-md-4 text-center">
                                     <a href="#"><img src="assets/images/Fosحa logo.jpg" height="200px" width="200px" alt="Fosحa logo"></a> 
-                                   
-                                    <div class="content mt-4 pt-2">
+                                </div><!--end col-->
+                                <div class="col-md-4">
+                                <div class="content mt-4 pt-2">
                                         <h4 class="text-white title-dark text-uppercase mb-3">Fosحa</h4>
                                        
                                         <p class="mb-2">20 Mohamed Radwan street, Osman Mohram, <br>Haram,Giza, Egypt.</p>
@@ -20,14 +21,17 @@
                                             <li class="list-inline-item mx-2"><a href="mailto:contact@example.com" class="text-foot">fos7a@outlook.com</a></li>
                                         </ul>
 
-                                        <ul class="list-unstyled social-icon foot-social-icon mb-0 mt-4">
+                                        
+                                    </div>
+                                </div>
+                                <div class="col-md-4 d-flex flex-column align-items-center justify-content-center">
+                                <ul class="list-unstyled social-icon foot-social-icon mb-0 mt-4">
                                             <li class="list-inline-item"><a href="javascript:void(0)" class="rounded"><i data-feather="facebook" class="fea icon-sm fea-social"></i></a></li>
                                             <li class="list-inline-item"><a href="javascript:void(0)" class="rounded"><i data-feather="instagram" class="fea icon-sm fea-social"></i></a></li>
                                             <li class="list-inline-item"><a href="javascript:void(0)" class="rounded"><i data-feather="twitter" class="fea icon-sm fea-social"></i></a></li>
                                             <li class="list-inline-item"><a href="javascript:void(0)" class="rounded"><i data-feather="linkedin" class="fea icon-sm fea-social"></i></a></li>
                                         </ul><!--end icon-->
-                                    </div>
-                                </div><!--end col-->
+                                </div>
                             </div><!--end row-->
                         </div>
                     </div><!--end col-->
