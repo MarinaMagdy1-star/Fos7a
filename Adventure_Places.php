@@ -1,6 +1,6 @@
 <?php require_once("php-functions/connection.php"); ?>
 <?php
-$sql_query = "SELECT * FROM places WHERE category = 'Adventure Places'";
+$sql_query = "SELECT * FROM places WHERE category = '3'";
 $result =  mysqli_query($conn,$sql_query);
 $places = mysqli_fetch_all($result,MYSQLI_ASSOC);
 ?>
