@@ -13,11 +13,7 @@ if (isset($_POST['user_register'])) {
     $result = mysqli_query($conn, $sql);
     if ($result == 1)
     {
-        $_SESSION["isLogin"] = true;
-        $_SESSION['user_id'] = $user['uid'];
-        $_SESSION['email'] = $user['email'];
-        $_SESSION['name'] = $user['name'];
-        header("Location: ../index.php");
+        header("Location: ../user_login.php");
         exit(); // terminate the script
     }
     

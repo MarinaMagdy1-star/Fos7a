@@ -1,3 +1,4 @@
+<?php require_once("connection.php"); ?>
 
 <?php
 
@@ -27,7 +28,7 @@ if (isset($_POST['user_login'])) {
         }
     } else {
         $_SESSION['error'] = "Something went wrong please try again.";
-        header("Location: login.php");
+        header("Location: user_login.php");
         exit(); // terminate the script
     }
 }
