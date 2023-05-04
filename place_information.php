@@ -10,9 +10,10 @@ if (isset($_POST['place_information'])){
     $target_dir = "Images/";
     $target_file = $target_dir . basename($images);
     move_uploaded_file($_FILES["placeimages"]["tmp_name"], $target_file);
-    $sql = "INSERT INTO places (`name`, `category`, `region`, `location`, `description`,`images`)  VALUES('$Place_name','$location','$region','$category','$description','$images')";
+    $sql = "INSERT INTO places (`name`, `category`, `region`, `location`, `description`,`images`,`owner_id`,`place_status`)  VALUES('$Place_name','$location','$region','$category','$description','$images',".$_SESSION['placeowner_id'].", 1)";
     if (mysqli_query($conn, $sql)){
         echo "New record created successfully";
+        header('location: payment.php?place_id='.mysqli_insert_id($conn));
         } else {
          echo "Error: " .$sql . "<br>" .mysqli_error($conn);
          }

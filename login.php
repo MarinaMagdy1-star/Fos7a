@@ -1,5 +1,7 @@
-<?php require_once("php-functions/connection.php"); ?>
+<?php require_once("php-functions/connection.php"); 
+include('php-functions/login-handle.php');
 
+?>
 <!DOCTYPE html>
 <html lang="en">
 <?php include("php-includes/head-tags.php"); ?>
@@ -19,7 +21,7 @@
                             <h4 class="title mb-3"> PlaceOwner Login</h4>
                         </div>
                         <div class="custom-form">
-                            <form  method="post">
+                            <form  method="POST">
                                
                                 <div class="row">
                                     
@@ -46,7 +48,7 @@
                                 <div class="row">
                                     <div class="col-12">
                                         <div class="d-grid">
-                                            <button a href="place_information.php" type="submit" id="submit" name="user_login" class="btn btn-primary">Login</button>
+                                            <button type="submit" id="submit" name="login_placeowner" class="btn btn-primary">Login</button>
                                         </div>
                                     </div><!--end col-->
                                 </div><!--end row-->
