@@ -13,7 +13,7 @@ if (isset($_POST['place_information'])){
     $sql = "INSERT INTO places (`name`, `category`, `region`, `location`, `description`,`images`,`owner_id`,`place_status`)  VALUES('$Place_name','$location','$region','$category','$description','$images',".$_SESSION['placeowner_id'].", 1)";
     if (mysqli_query($conn, $sql)){
         echo "New record created successfully";
-        header('location: payment.php?place_id='.mysqli_insert_id($conn));
+        header('location: more_images.php?place_id='.mysqli_insert_id($conn));
         } else {
          echo "Error: " .$sql . "<br>" .mysqli_error($conn);
          }

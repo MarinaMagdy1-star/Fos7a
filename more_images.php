@@ -1,5 +1,8 @@
-<?php require_once("php-functions/connection.php"); ?>
-
+<?php require_once("php-functions/connection.php"); 
+if(isset($_GET['place_id'])){
+ header('location: payment.php?place_id='.$_GET['place_id']);
+}
+?>
 
 <!DOCTYPE html>
 <html lang="en">
