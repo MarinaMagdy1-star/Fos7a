@@ -10,7 +10,7 @@
 
 
 <!-- Start -->
-<section class="section">
+<!-- <section class="section">
             <div class="container">
                     <div class="row">
                         <div>
@@ -77,7 +77,42 @@
                 </div><!--end row-->
                 </div><!--end container-->
         </section><!--end section-->
-        <!-- End -->
+        
+<!-- Start -->
+<section class="section my-5">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        
+
+                        <div class="custom-form" >
+                            <form method="post" enctype="multipart/form-data">
+                               
+                                <div class="row">
+        <center><h3>payment </h3></center>
+
+                                        <div class="col-md-6">
+                                        <br><br>
+                                        <div class="mb-3">
+                                            
+                                            <label class="form-label">Please select your type of payment: <span class="text-danger">*</span></label>
+                                            <br>
+                                               <select name="type_payment" required> 
+                                                <option value="Orange" selected> Orange Cash</option>
+                                                <option value="Vodafone" > Vodafone Cash</option>
+                                                
+                            
+                                               </select>
+                                               </div> 
+                                    </div><!--end col-->
+
+                                             
+                                        <div class="mb-3">
+                                        <br><br>
+                                            <label class="formFileMultiple"> Please put the invoice:<span class="text-danger">*</span></label>
+                                                <input required name="invoice" id="invoice" type="file" class="form-control" >
+                                        </div> 
+                                    </div><!--end col-->
 
 
 
