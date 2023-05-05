@@ -1,27 +1,46 @@
-<?php require_once("php-functions/connection.php"); ?>
+<?php require_once("php-functions/connection.php"); 
 
-<?php
-if (isset($_POST['place_information'])){
-    $image_1_url	 = mysqli_real_escape_string($conn,$_POST['image_1_url']);
-    $image_2_url	 = mysqli_real_escape_string($conn,$_POST['image_2_url']);
-    $image_3_url	 = mysqli_real_escape_string($conn,$_POST['image_3_url']);
-    $image_4_url	 = mysqli_real_escape_string($conn,$_POST['image_4_url']);
-    $image_5_url	 = mysqli_real_escape_string($conn,$_POST['image_5_url']);
-    $images = time() . '-' . $_FILES["placeimages"]["name"];
+if(isset($_POST['more_images'])){
+    $image_1 = time() . '-' . $_FILES["image1"]["name"];
     $target_dir = "Images/";
-    $target_file = $target_dir . basename($images);
-    move_uploaded_file($_FILES["placeimages"]["tmp_name"], $target_file);
-    $sql = "INSERT INTO places (``, `image_1_url`, `image_2_url`, `image_3_url`, `image_4_url`,`image_5_url`)  
-                                VALUES('','$image_1_url','$image_2_url','$image_3_url','$image_4_url','$image_1_url',".$_SESSION['placeowner_id'].", 1)";
+    $target_file = $target_dir . basename($image_1);
+    move_uploaded_file($_FILES["image1"]["tmp_name"], $target_file);
+
+    $image_2 = time() . '-' . $_FILES["image2"]["name"];
+    $target_dir = "Images/";
+    $target_file = $target_dir . basename($image_2);
+    move_uploaded_file($_FILES["image2"]["tmp_name"], $target_file);
+
+    $image_3 = time() . '-' . $_FILES["image3"]["name"];
+    $target_dir = "Images/";
+    $target_file = $target_dir . basename($image_3);
+    move_uploaded_file($_FILES["image3"]["tmp_name"], $target_file);
+
+    $image_4 = time() . '-' . $_FILES["image4"]["name"];
+    $target_dir = "Images/";
+    $target_file = $target_dir . basename($image_4);
+    move_uploaded_file($_FILES["image4"]["tmp_name"], $target_file);
+
+    $image_5 = time() . '-' . $_FILES["image5"]["name"];
+    $target_dir = "Images/";
+    $target_file = $target_dir . basename($image_5);
+    move_uploaded_file($_FILES["image5"]["tmp_name"], $target_file);
+
+
+    $sql = "INSERT INTO `place_images`( `place_id`, `place_owner_id`, `image_1_url`, `image_2_url`, `image_3_url`, `image_4_url`, `image_5_url`)  VALUES(".$_GET['place_id'].", ".$_SESSION['placeowner_id']." ,'$image_1','$image_2','$image_3','$image_4','$image_5')";
     if (mysqli_query($conn, $sql)){
         echo "New record created successfully";
-        header('location: more_images.php?place_id='.mysqli_insert_id($conn));
-        } else {
-         echo "Error: " .$sql . "<br>" .mysqli_error($conn);
-         }
-         mysqli_close($conn);
-   }
-   ?>
+        header('location: payment.php?place_id='.$_GET['place_id']);
+    } else {
+        echo "Error: " .$sql . "<br>" .mysqli_error($conn);
+        }
+        mysqli_close($conn);
+   
+}
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <?php include("php-includes/head-tags.php"); ?>
@@ -36,7 +55,7 @@ if (isset($_POST['place_information'])){
                         
 
                         <div class="custom-form" >
-                            <form method="post" enctype="multipart/form-data" action ="payment.php">
+                            <form method="post" enctype="multipart/form-data" >
                                
                                 <div class="row">
 
@@ -47,7 +66,7 @@ if (isset($_POST['place_information'])){
                                         <div class="mb-3">
                                             <br><br>
                                             <label class="formFileMultiple">Image 1<span class="text-danger">*</span></label>
-                                                <input name="image1" id="image1" type="file" class="form-control" >
+                                                <input required name="image1" id="image1" type="file" class="form-control" >
                                         </div> 
                                     </div><!--end col-->
 
@@ -55,28 +74,28 @@ if (isset($_POST['place_information'])){
                                         <div class="mb-3">
                                             <br><br>
                                             <label class="formFileMultiple">Image 2<span class="text-danger">*</span></label>
-                                                <input name="image2" id="image2" type="file" class="form-control" >
+                                                <input required name="image2" id="image2" type="file" class="form-control" >
                                         </div> 
                                     </div><!--end col-->
 
                                     <div class="col-md-6">
                                         <div class="mb-3">
                                             <label class="formFileMultiple">Image 3<span class="text-danger">*</span></label>
-                                                <input name="image3" id="image3" type="file" class="form-control" >
+                                                <input required name="image3" id="image3" type="file" class="form-control" >
                                         </div> 
                                     </div><!--end col-->
 
                                     <div class="col-md-6">
                                         <div class="mb-3">
                                             <label class="formFileMultiple">Image 4<span class="text-danger">*</span></label>
-                                                <input name="image4" id="image4" type="file" class="form-control" >
+                                                <input required name="image4" id="image4" type="file" class="form-control" >
                                         </div> 
                                     </div><!--end col-->
 
                                     <div class="col-md-6">
                                         <div class="mb-3">
                                             <label class="formFileMultiple">Image 5<span class="text-danger">*</span></label>
-                                                <input name="image5" id="image5" type="file" class="form-control" >
+                                                <input required name="image5" id="image5" type="file" class="form-control" >
                                         </div> 
                                     </div><!--end col-->
 
