@@ -35,14 +35,14 @@ include('php-functions/login-handle.php');
                                     <div class="col-md-6">
                                         <div class="mb-3">
                                             <label class="form-label">Your Email <span class="text-danger">*</span></label>
-                                                <input name="email" id="email" type="email" class="form-control" placeholder="Email :">
+                                                <input name="email" id="email" type="email" class="form-control" placeholder="Email :" required>
                                         </div> 
                                     </div><!--end col-->
 
                                     <div class="col-md-6">
                                         <div class="mb-3">
                                             <label class="form-label">Your Password <span class="text-danger">*</span></label>
-                                                <input name="password" id="password" type="password" class="form-control" placeholder="password :">
+                                                <input name="password" id="password" type="password" class="form-control" placeholder="password :" required>
                                         </div> 
                                     </div><!--end col-->
                                 </div>

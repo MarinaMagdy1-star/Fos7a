@@ -59,21 +59,21 @@
                                     <div class="col-md-6">
                                         <div class="mb-3">
                                             <label class="form-label">Your Password <span class="text-danger">*</span></label>
-                                                <input name="password" id="password" type="password" class="form-control" placeholder="password :">
+                                                <input name="password" id="password" type="password" class="form-control" placeholder="password :" required>
                                         </div> 
                                     </div><!--end col-->
 
                                     <div class="col-md-6">
                                         <div class="mb-3">
                                             <label class="form-label">Your Email <span class="text-danger">*</span></label>
-                                                <input name="placeowner_email" id="placeowner_email" type="email" class="form-control" placeholder="Email :">
+                                                <input name="placeowner_email" id="placeowner_email" type="email" class="form-control" placeholder="Email :" required>
                                         </div> 
                                     </div><!--end col-->
 
                                     <div class="col-md-6">
                                         <div class="mb-3">
                                             <label class="form-label">Your Phone Number <span class="text-danger">*</span></label>
-                                                <input name="phonenumber" id="phonenumber" type="varchar" class="form-control">
+                                                <input name="phonenumber" id="phonenumber" type="varchar" class="form-control" required>
                                         </div> 
                                     </div><!--end col-->
                                     <div class="row">
