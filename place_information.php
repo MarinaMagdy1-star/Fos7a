@@ -79,12 +79,27 @@ if (isset($_POST['place_information'])){
                                             <label class="form-label">Place Category <span class="text-danger">*</span></label>
                                             <br>
                                                <select name="category" required>
-                                                 
-                                                <option value="Touristic" selected> Touristic Places</option>
+                                               <?php 
+
+
+ $categories = "SELECT * FROM `categories`";
+$category_query = mysqli_query($conn, $categories) or die('users_error'.mysqli_error());
+
+while($result = mysqli_fetch_array($category_query)){
+?>
+<option value="<?php echo $result['cid'] ?>"><?php echo $result['type_of_place'] ?>
+</option>
+<?php
+}
+?> 
+</select> 
+
+                        
+                                               <!-- <option value="Touristic" selected> Touristic Places</option>
                                                 <option value="Co_Working" > Co_Working Places</option>
                                                 <option value="Adventure"  > Adventure Places</option>
                                                 <option value="Restaurants & Cafes" > Restaurants & Cafes </option>
-                                               </select>
+                                               </select> -->
 
                                         </div> 
                                     </div><!--end col-->
