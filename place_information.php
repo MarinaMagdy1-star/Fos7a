@@ -10,10 +10,11 @@ if (isset($_POST['place_information'])){
     $target_dir = "Images/";
     $target_file = $target_dir . basename($images);
     move_uploaded_file($_FILES["placeimages"]["tmp_name"], $target_file);
-    $sql = "INSERT INTO places (`name`, `category`, `region`, `location`, `description`,`images`,`owner_id`,`place_status`)  VALUES('$Place_name','$category','$region','$location','$description','$images',".$_SESSION['placeowner_id'].", 1)";
+    $sql = "INSERT INTO places (`name`, `category`, `region`, `location`, `description`,`images`,`owner_id`,`place_status`)
+      VALUES('$Place_name','$category','$region','$location','$description','$images',".$_SESSION['placeowner_id'].", 1)";
     if (mysqli_query($conn, $sql)){
         echo "New record created successfully";
-        header('location: payment.php?place_id='.mysqli_insert_id($conn));
+        header('location: more_images.php?place_id='.mysqli_insert_id($conn));
         } else {
          echo "Error: " .$sql . "<br>" .mysqli_error($conn);
          }
@@ -37,7 +38,7 @@ if (isset($_POST['place_information'])){
                         
 
                         <div class="custom-form" >
-                            <form method="post" enctype="multipart/form-data">
+                            <form method="post" enctype="multipart/form-data" >
                                
                                 <div class="row">
                                     
@@ -114,7 +115,7 @@ if (isset($_POST['place_information'])){
                                       <div class="col-12">
                                       <div class="d-grid">
                                       <br><br>
-                                        <button a href="more_images.php" type="submit" id="submit_placeinfo" name="place_information" class="btn btn-primary">Submit</button>
+                                        <button  type="submit" id="submit_placeinfo" name="place_information" class="btn btn-primary">Submit</button>
                                      </div>
                                  </div>
                                 

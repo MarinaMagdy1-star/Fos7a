@@ -14,7 +14,7 @@
             <div class="container">
                     <div class="row">
                         <div>
-                            <form>
+                            <form action ="">
                                 <h4 class="mb-3 mt-4 pt-4 border-top">Payment</h4>
 
                                 <div class="my-3">

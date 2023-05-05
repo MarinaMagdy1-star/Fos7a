@@ -18,6 +18,7 @@
                         <div class="title-heading text-center">
                             <h5 class="heading fw-semibold mb-0 page-heading text-white title-dark">Your Favourites</h5>
                         </div>
+                        
                     </div><!--end col-->
                 </div><!--end row-->
             </div><!--end container-->
