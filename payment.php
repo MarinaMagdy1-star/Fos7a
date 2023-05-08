@@ -132,6 +132,12 @@ if (isset($_POST['payment'])){
                                                 <input required name="invoice" id="invoice" type="file" class="form-control" >
                                         </div> 
                                     </div><!--end col-->
+                                    <div class="row">
+                                    <div class="col-12">
+                                        <div class="d-grid">
+                                            <button type="submit" id="payment_submit" name="payment_submit" class="btn btn-primary">Submit</button>
+                                        </div>
+                                        </div><!--end col-->
 
 
 
