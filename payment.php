@@ -14,7 +14,7 @@ if (isset($_POST['payment'])){
     $target_dir = "Images/";
     $target_file = $target_dir . basename($images);
     move_uploaded_file($_FILES["placeimages"]["tmp_name"], $target_file);
-    $sql = "INSERT INTO  subscriptions (`subscription_id`, `place_owner_id`, `	place_id`, `type_of_payment`,`simages`)
+    $sql = "INSERT INTO  subscriptions (`subscription_id`, `place_owner_id`, `	place_id`, `type_of_payment`,`images`)
       VALUES('',".$_GET['place_id'].", ".$_SESSION['placeowner_id'].",'$type_of_payment ','$images')";
     if (mysqli_query($conn, $sql)){
         echo "New record created successfully";
