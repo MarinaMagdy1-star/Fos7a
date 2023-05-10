@@ -27,7 +27,8 @@ if(isset($_POST['more_images'])){
     move_uploaded_file($_FILES["image5"]["tmp_name"], $target_file);
 
 
-    $sql = "INSERT INTO `place_images`( `place_id`, `place_owner_id`, `image_1_url`, `image_2_url`, `image_3_url`, `image_4_url`, `image_5_url`)  VALUES(".$_GET['place_id'].", ".$_SESSION['placeowner_id']." ,'$image_1','$image_2','$image_3','$image_4','$image_5')";
+    $sql = "INSERT INTO `place_images`( `place_id`, `place_owner_id`, `image_1_url`, `image_2_url`, `image_3_url`, `image_4_url`, `image_5_url`) 
+     VALUES(".$_GET['place_id'].", ".$_SESSION['placeowner_id']." ,'$image_1','$image_2','$image_3','$image_4','$image_5')";
     if (mysqli_query($conn, $sql)){
         echo "New record created successfully";
         header('location: payment.php?place_id='.$_GET['place_id']);
@@ -39,7 +40,14 @@ if(isset($_POST['more_images'])){
 }
 
 ?>
+<?php
 
+                    $sql = "SELECT `place_image_id`, `place_id`, `image_1_url`, `image_2_url`, `image_3_url`, `image_4_url`, `image_5_url`, `place_owner_id` FROM `place_images`
+                     WHERE place_id= ".$_GET['place_id']." ;"
+                    $result = mysqli_query($conn, $sql);
+                
+                    while($images = mysqli_fetch_array($result))
+                    ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -55,14 +63,14 @@ if(isset($_POST['more_images'])){
                         
 
                         <div class="custom-form" >
-                            <form method="post" enctype="multipart/form-data">
+                            <form method="post" enctype="multipart/form-data" >
                                
                                 <div class="row">
 
     <center><h3>Add your place images:</h3></center>
 
 
-    <div class="col-md-6">
+                                         <div class="col-md-6">
                                         <div class="mb-3">
                                             <br><br>
                                             <label class="formFileMultiple">Image 1<span class="text-danger">*</span></label>

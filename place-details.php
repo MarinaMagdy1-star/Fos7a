@@ -44,15 +44,23 @@ $place = mysqli_fetch_assoc($result);
                     <div class="col-12">
                         <div class="tiny-single-item">
                             <div class="tiny-slide">
-                                <img src="assets/images/portfolio/single01.jpg" class="img-fluid " alt="">
+                                <img src="images/portfolio/single01.jpg" class="img-fluid " alt="">
                             </div>
                             
                             <div class="tiny-slide">
-                                <img src="assets/images/portfolio/single02.jpg" class="img-fluid " alt="">
+                                <img src="images/portfolio/single02.jpg" class="img-fluid " alt="">
                             </div>
                             
                             <div class="tiny-slide">
-                                <img src="assets/images/portfolio/single03.jpg" class="img-fluid " alt="">
+                                <img src="images/portfolio/single03.jpg" class="img-fluid " alt="">
+                            </div>
+
+                            <div class="tiny-slide">
+                                <img src="images/portfolio/single03.jpg" class="img-fluid " alt="">
+                            </div>
+
+                            <div class="tiny-slide">
+                                <img src="images/portfolio/single03.jpg" class="img-fluid " alt="">
                             </div>
                         </div>
                     </div><!--end col-->

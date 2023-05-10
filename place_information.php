@@ -10,9 +10,12 @@ if (isset($_POST['place_information'])){
     $target_dir = "Images/";
     $target_file = $target_dir . basename($images);
     move_uploaded_file($_FILES["placeimages"]["tmp_name"], $target_file);
-    $sql = "INSERT INTO places (`name`, `category`, `region`, `location`, `description`,`images`,`owner_id`,`place_status`)  VALUES('$Place_name','$location','$region','$category','$description','$images',".$_SESSION['placeowner_id'].", 1)";
+    $sql = "INSERT INTO places (`name`, `category`, `region`, `location`, `description`,`images`,`owner_id`,`place_status`)
+      VALUES('$Place_name','$category','$region','$location','$description','$images',".$_SESSION['placeowner_id'].", 1)";
     if (mysqli_query($conn, $sql)){
         echo "New record created successfully";
+
+
     header('location: more_images.php?place_id='.mysqli_insert_id($conn));
     } else {
         echo "Error: " .$sql . "<br>" .mysqli_error($conn);
@@ -38,7 +41,7 @@ if (isset($_POST['place_information'])){
                         
 
                         <div class="custom-form" >
-                            <form method="post" enctype="multipart/form-data">
+                            <form method="post" enctype="multipart/form-data" >
                                
                                 <div class="row">
                                     
@@ -76,12 +79,28 @@ if (isset($_POST['place_information'])){
                                         <div class="mb-3">
                                             <label class="form-label">Place Category <span class="text-danger">*</span></label>
                                             <br>
-                                               <select name="category" required> 
-                                                <option value="Touristic" selected> Touristic Places</option>
+                                               <select name="category" required>
+                                               <?php 
+
+
+ $categories = "SELECT * FROM `categories`";
+$category_query = mysqli_query($conn, $categories) or die('users_error'.mysqli_error());
+
+while($result = mysqli_fetch_array($category_query)){
+?>
+<option value="<?php echo $result['cid'] ?>"><?php echo $result['type_of_place'] ?>
+</option>
+<?php
+}
+?> 
+</select> 
+
+                        
+                                               <!-- <option value="Touristic" selected> Touristic Places</option>
                                                 <option value="Co_Working" > Co_Working Places</option>
                                                 <option value="Adventure"  > Adventure Places</option>
                                                 <option value="Restaurants & Cafes" > Restaurants & Cafes </option>
-                                               </select>
+                                               </select> -->
 
                                         </div> 
                                     </div><!--end col-->
@@ -115,7 +134,7 @@ if (isset($_POST['place_information'])){
                                       <div class="col-12">
                                       <div class="d-grid">
                                       <br><br>
-                                        <button a href="more_images.php" type="submit" id="submit_placeinfo" name="place_information" class="btn btn-primary">Submit</button>
+                                        <button  type="submit" id="submit_placeinfo" name="place_information" class="btn btn-primary">Submit</button>
                                      </div>
                                  </div>
                                 
