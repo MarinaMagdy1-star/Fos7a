@@ -40,14 +40,6 @@ if(isset($_POST['more_images'])){
 }
 
 ?>
-<?php
-
-                    $sql = "SELECT `place_image_id`, `place_id`, `image_1_url`, `image_2_url`, `image_3_url`, `image_4_url`, `image_5_url`, `place_owner_id` FROM `place_images`
-                     WHERE place_id= ".$_GET['place_id']." ;"
-                    $result = mysqli_query($conn, $sql);
-                
-                    while($images = mysqli_fetch_array($result))
-                    ?>
 
 <!DOCTYPE html>
 <html lang="en">
