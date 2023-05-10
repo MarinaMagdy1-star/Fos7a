@@ -6,7 +6,6 @@ $result =  mysqli_query($conn,$sql_query);
 $place = mysqli_fetch_assoc($result);
 ?>
 
-
 <!DOCTYPE html>
 <html lang="en">
 <?php include("php-includes/head-tags.php"); ?>
