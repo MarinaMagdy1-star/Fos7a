@@ -13,11 +13,11 @@ if (isset($_POST['place_information'])){
     $sql = "INSERT INTO places (`name`, `category`, `region`, `location`, `description`,`images`,`owner_id`,`place_status`)  VALUES('$Place_name','$location','$region','$category','$description','$images',".$_SESSION['placeowner_id'].", 1)";
     if (mysqli_query($conn, $sql)){
         echo "New record created successfully";
-        header('location: more_images.php?place_id='.mysqli_insert_id($conn));
-        } else {
-         echo "Error: " .$sql . "<br>" .mysqli_error($conn);
-         }
-         mysqli_close($conn);
+    header('location: more_images.php?place_id='.mysqli_insert_id($conn));
+    } else {
+        echo "Error: " .$sql . "<br>" .mysqli_error($conn);
+    }
+    mysqli_close($conn);
    }
    ?>
    
@@ -54,21 +54,21 @@ if (isset($_POST['place_information'])){
                                     <div class="col-md-6">
                                         <div class="mb-3">
                                             <label class="form-label">Place Name <span class="text-danger">*</span></label>
-                                                <input name="Place_name" id="Place_name" type="name" class="form-control">
+                                                <input name="Place_name" id="Place_name" type="name" class="form-control" required>
                                         </div> 
                                     </div><!--end col-->
 
                                     <div class="col-md-6">
                                         <div class="mb-3">
                                             <label class="form-label">Your Place Location <span class="text-danger">*</span></label>
-                                                <input name="location" id="location" type="url" class="form-control">
+                                                <input name="location" id="location" type="url" class="form-control" required>
                                         </div> 
                                     </div><!--end col-->
 
                                     <div class="col-md-6">
                                         <div class="mb-3">
                                             <label class="form-label">Region<span class="text-danger">*</span></label>
-                                                <input name="region" id="region" type="text" class="form-control" placeholder="eg:Zamalek">
+                                                <input required name="region" id="region" type="text" class="form-control" placeholder="eg:Zamalek">
                                         </div> 
                                     </div><!--end col-->
 
@@ -76,7 +76,7 @@ if (isset($_POST['place_information'])){
                                         <div class="mb-3">
                                             <label class="form-label">Place Category <span class="text-danger">*</span></label>
                                             <br>
-                                               <select name="category"> 
+                                               <select name="category" required> 
                                                 <option value="Touristic" selected> Touristic Places</option>
                                                 <option value="Co_Working" > Co_Working Places</option>
                                                 <option value="Adventure"  > Adventure Places</option>
@@ -89,21 +89,21 @@ if (isset($_POST['place_information'])){
                                     <div class="col-md-6">
                                         <div class="mb-3">
                                             <label class="form-label">Please write your place descreption:<span class="text-danger">*</span></label>
-                                                <input name="comment" id="comment" type="text" row="4" class="form-control" placeholder="Your Answer:">
+                                                <input required name="comment" id="comment" type="text" row="4" class="form-control" placeholder="Your Answer:">
                                         </div> 
                                     </div><!--end col-->
 
                                     <div class="col-md-6">
                                         <div class="mb-3">
                                             <label class="formFileMultiple">Add your main image:<span class="text-danger">*</span></label>
-                                                <input name="placeimages" id="placeimages" type="file" class="form-control" >
+                                                <input required name="placeimages" id="placeimages" type="file" class="form-control" >
                                         </div> 
                                     </div><!--end col-->
 
                                     <div class="col-md-6">
                                         <div class="mb-3">
                                             <label class="form-label">Prices<span class="text-danger">*</span></label>
-                                                <input name="price" id="price" type="varchar"  class="form-control" placeholder="put a range">
+                                                <input name="price" required id="price" type="number"  class="form-control" placeholder="put a range">
                                         </div> 
                                     </div><!--end col-->
                                     
