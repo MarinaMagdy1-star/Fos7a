@@ -8,14 +8,14 @@
 <?php include("php-includes/navbar.php"); ?>
 
 <?php
-if (isset($_POST['payment'])){
+if (isset($_POST['payment_submit'])){
     $type_of_payment = mysqli_real_escape_string($conn,$_POST['type_of_payment']);
     $images = time() . '-' . $_FILES["placeimages"]["name"];
     $target_dir = "Images/";
     $target_file = $target_dir . basename($images);
     move_uploaded_file($_FILES["placeimages"]["tmp_name"], $target_file);
-    $sql = "INSERT INTO  subscriptions (`subscription_id`, `place_owner_id`, `	place_id`, `type_of_payment`,`images`)
-      VALUES('',".$_GET['place_id'].", ".$_SESSION['placeowner_id'].",'$type_of_payment ','$images')";
+    $sql = "INSERT INTO  subscriptions (`place_owner_id`, `place_id`, `type_of_payment`,`images`)
+      VALUES(".$_SESSION['placeowner_id'].", ".$_GET['place_id'].",'$type_of_payment ','$images')";
     if (mysqli_query($conn, $sql)){
         echo "New record created successfully";
 
