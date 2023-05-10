@@ -48,7 +48,7 @@
                     <div class="col-lg-4 col-md-6 mt-4 pt-2">
                         <div class="card blog blog-primary shadow rounded overflow-hidden">
                             <div class="image position-relative overflow-hidden">
-                                <img src="assets/images/touristic_places/el azhar.jpg" class="img-fluid" alt="">
+                            <img src="Images/<?php echo $place['images']?>" class="img-fluid" alt="">
                                 <!--button el favorite-->
                                
                                 <button type="button" onclick="addToFav(<?php echo $place['id']?>)" class="favorite-btn">
@@ -64,6 +64,7 @@
                             </div>
 
                             <div class="card-body content">
+                                
                                 <a href="blog-detail-four.html" class="h5 title text-dark d-block mb-0"><?php echo $place['name'] ?></a>
                                 <p class="text-muted mt-2 mb-2"><?php echo $place['type_of_place'] ?></p> <!--city-->
                                 <a href="place-details.php?placeid=<?php echo $place['id'] ?>" class="link text-dark">Read More <i class="uil uil-arrow-right align-middle"></i></a>

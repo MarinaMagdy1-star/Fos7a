@@ -89,7 +89,7 @@
                             <?php if(isset($_SESSION['user_id'])) { ?>
                             <li class="has-submenu parent-parent-menu-item">
                             <a href="logout.php">Logout</a>
-                            <a href="favorites.php">favorites</a>
+                            
                             
                             </li>
                             <?php }elseif(isset($_SESSION['placeowner_id'])){ ?>
@@ -115,7 +115,7 @@
                         
                              <?php if(isset($_SESSION['user_id'])) { ?>
                             <li class="has-submenu parent-parent-menu-item">
-                            <a href="favorites.php">Favourites</a><span class="menu-arrow"></span>                                
+                            <a href="favorites.php">Favorites</a><span class="menu-arrow"></span>                                
                             </li>
                             <?php }?>
                             
