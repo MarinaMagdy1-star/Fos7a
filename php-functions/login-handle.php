@@ -50,7 +50,7 @@ if(isset($_POST['login_placeowner'])){
                 $_SESSION['placeowner_id'] = $placeowner['pid'];
                 $_SESSION['email'] = $placeowner['email'];
                 $_SESSION['name'] = $placeowner['name'];
-                header("Location: place_information.php");
+                header("Location: placeowner_profile.php");
                 exit(); // terminate the script
             } 
             else {

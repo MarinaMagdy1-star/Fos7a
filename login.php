@@ -2,7 +2,6 @@
 include('php-functions/login-handle.php');
 
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <?php include("php-includes/head-tags.php"); ?>

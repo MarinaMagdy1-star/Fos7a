@@ -21,7 +21,7 @@
                                             <h1 class="display-1 fw-semibold text-uppercase mb-3 text-white text-shadow-dark-lg title-dark animated fadeInUpBig animation-delay-3">Touristic Places</h1>
                                             <p class="para-desc text-white-50 para-dark mx-auto animated fadeInUpBig animation-delay-5">Touristic Places are places that people visit for pleasure and interest, usually while they are on holiday</p>
                                             <div class="mt-4 pt-2 animated fadeInUpBig animation-delay-7">
-                                                <a href="Touristic_Places.php" class="btn btn-font-sm btn-pills-0 btn-lg btn-light text-uppercase mt-2">View more</a>
+                                                <a href="places.php?category_id=1" class="btn btn-font-sm btn-pills-0 btn-lg btn-light text-uppercase mt-2">View more</a>
                                             </div>
                                         </div>
                                     </div><!--end col-->
@@ -42,7 +42,7 @@
                                             <h1 class="display-1 fw-semibold text-uppercase mb-3 text-white text-shadow-dark-lg title-dark animated fadeInUpBig animation-delay-3">Co_Working Places</h1>
                                             <p class="para-desc text-white-50 para-dark mx-auto animated fadeInUpBig animation-delay-5">Co_Working Places are an environment that's designed to accommodate people from different companies who come to do work.</p>
                                             <div class="mt-4 pt-2 animated fadeInUpBig animation-delay-7">
-                                                <a href="Co_Working_Places.php" class="btn btn-font-sm btn-pills-0 btn-lg btn-light text-uppercase mt-2">View More</a>
+                                                <a href="places.php?category_id=2" class="btn btn-font-sm btn-pills-0 btn-lg btn-light text-uppercase mt-2">View More</a>
                                             </div>
                                         </div>
                                     </div><!--end col-->
@@ -62,7 +62,7 @@
                                             <h1 class="display-1 fw-semibold text-uppercase mb-3 text-white text-shadow-dark-lg title-dark animated fadeInUpBig animation-delay-3">Adventure Places</h1>
                                             <p class="para-desc text-white-50 para-dark mx-auto animated fadeInUpBig animation-delay-5">Adventure Places offering a variety of outdoor entertainments involving physical challenges & often undertaken to create psychological arousal.</p>
                                             <div class="mt-4 pt-2 animated fadeInUpBig animation-delay-7">
-                                                <a href="Adventure_Places.php" class="btn btn-font-sm btn-pills-0 btn-lg btn-light text-uppercase mt-2">View More</a>
+                                                <a href="places.php?category_id=3" class="btn btn-font-sm btn-pills-0 btn-lg btn-light text-uppercase mt-2">View More</a>
                                             </div>
                                         </div>
                                     </div><!--end col-->
@@ -82,7 +82,7 @@
                                             <h1 class="display-1 fw-semibold text-uppercase mb-3 text-white text-shadow-dark-lg title-dark animated fadeInUpBig animation-delay-3">Restaurants & Cafes</h1>
                                             <p class="para-desc text-white-50 para-dark mx-auto animated fadeInUpBig animation-delay-5">Restaurants & Cafes prepare and serves food and drinks to customers.including a wide variety of cuisines and service models.</p>
                                             <div class="mt-4 pt-2 animated fadeInUpBig animation-delay-7">
-                                                <a href="Restaurants&Cafes.php" class="btn btn-font-sm btn-pills-0 btn-lg btn-light text-uppercase mt-2">View More</a>
+                                                <a href="places.php?category_id=4" class="btn btn-font-sm btn-pills-0 btn-lg btn-light text-uppercase mt-2">View More</a>
                                             </div>
                                         </div>
                                     </div><!--end col-->
