@@ -93,22 +93,21 @@
                                 <p class="text-muted mt-2 mb-2"><?php echo $place['type_of_place'] ?></p> <!--city-->
                                 <a href="place-details.php?placeid=<?php echo $place['id'] ?>" class="link text-dark">Read More <i class="uil uil-arrow-right align-middle"></i></a>
                             </div>
+                            
                             <div class="center">
                                 <b>Reviews</b>
-                                <div class="stars"> 
-                                    <input type="radio" id="five" name="rate" value="5">
-                                    <label for="five"></label>
-                                    <input type="radio" id="four" name="rate" value="4">
-                                    <label for="five"></label>
-                                    <input type="radio" id="three" name="rate" value="3">
-                                    <label for="five"></label>
-                                    <input type="radio" id="two" name="rate" value="2">
-                                    <label for="five"></label>
-                                    <input type="radio" id="one" name="rate" value="1">
-                                    <label for="five"></label>
-                                    <spane class="result"></spane>
+                                <div class="star-rating">
+                            <input type="radio" id="star5" name="rating" value="5"><label for="star5"></label>
+                            <input type="radio" id="star4" name="rating" value="4"><label for="star4"></label>
+                            <input type="radio" id="star3" name="rating" value="3"><label for="star3"></label>
+                             <input type="radio" id="star2" name="rating" value="2"><label for="star2"></label>
+                             <input type="radio" id="star1" name="rating" value="1"><label for="star1"></label>
+                                </div>
 
-                                  </div>
+
+
+
+
 
                                </div>
 
