@@ -13,7 +13,7 @@
                 <div class="row mt-5 justify-content-center">
                     <div class="col-12">
                         <div class="title-heading text-center">
-                            <h5 class="heading fw-semibold mb-0 page-heading text-white title-dark">Your profile</h5>
+                            
                         </div>
                         
                     </div><!--end col-->
@@ -21,7 +21,11 @@
             </div><!--end container-->
         </section><!--end section-->
         <!-- Hero End -->
+        <br><br>
+<center><nav>
+<h1 class="placeowner_profile">You are one of us now. </h1>
 
+</nav></center>
 
 
 
