@@ -122,7 +122,7 @@ while($result = mysqli_fetch_array($category_query)){
                                     <div class="col-md-6">
                                         <div class="mb-3">
                                             <label class="form-label">Prices<span class="text-danger">*</span></label>
-                                                <input name="price" required id="price" type="number"  class="form-control" placeholder="put a range">
+                                                <input name="price" required id="price" type="text"  class="form-control" placeholder="put a range">
                                         </div> 
                                     </div><!--end col-->
                                     
