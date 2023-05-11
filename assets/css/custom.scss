@@ -54,6 +54,7 @@ object-fit: cover;
 
 .star-rating {
     display: inline-block;
+    direction: rtl; /* set direction to right-to-left */
   }
   
   .star-rating input[type="radio"] {
@@ -76,6 +77,20 @@ object-fit: cover;
   .star-rating input[type="radio"]:checked ~ label {
     color: #ffcc00;
   }
+
+  label:hover,
+  label:hover ~ label {
+    color: #ffcc00;
+  }
+ 
+  
+
+
+  
+  
+  
+ 
+  
 
 
 // .center{

@@ -64,6 +64,3 @@
         
             
 
-<?php include("php-includes/scripts.php"); ?>
-</body>
-</html>
