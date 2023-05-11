@@ -91,14 +91,14 @@ $place = mysqli_fetch_assoc($result);
                         </div>
 
                         <dl class="row mb-0">
-                            <dt class="col-md-4 fw-medium col-5">prices</dt>
+                            <dt class="col-md-4 fw-medium col-5">Prices</dt>
                     
                             <dd class="col-md-8 col-7 text-muted"><?php echo $place ['prices']  ?></dd>
 
                             <dt class="col-md-4 fw-medium col-5">location:</dt>
                             <dd class="col-md-8 col-7 text-muted"><?php echo $place ['location']  ?></dd>
 
-                            <dt class="col-md-4 fw-medium col-5">category	</dt>
+                            <dt class="col-md-4 fw-medium col-5">Region</dt>
                             <dd class="col-md-8 col-7 text-muted"><?php echo $place ['region']  ?></dd>
 
                             <dt class="col-md-4 fw-medium col-5"></dt>
