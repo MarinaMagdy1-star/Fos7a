@@ -23,22 +23,4 @@
 }
 .favorite-btn:hover svg {
   fill: white;
-}
-
-.img-fluid {
-  height: 250px;
-  width: 300px;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
-.more_images {
-  height: 500px;
-  width: 1000px;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
-.placeowner_profile {
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-}/*# sourceMappingURL=custom.css.map */
+}/*# sourceMappingURL=custom-ar.css.map */
