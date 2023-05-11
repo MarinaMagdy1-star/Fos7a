@@ -11,12 +11,17 @@
             <div class="bg-overlay bg-gradient-overlay"></div>
             <div class="container">
                 <div class="row mt-5 justify-content-center">
-                    <div class="col-12">
-                        <div class="title-heading text-center">
-                            
-                        </div>
-                        
                     </div><!--end col-->
+                    <div class="position-middle-bottom">
+                    <nav aria-label="breadcrumb" class="d-block">
+                        <ul class="breadcrumb breadcrumb-muted mb-0 p-0">
+                            <li class="breadcrumb-item"><a href="index.php">Home</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">profile</li>
+                            <li class="breadcrumb-item"><a href="place_information.php">Add place</a></li>
+
+                        </ul>
+                    </nav>
+                </div>
                 </div><!--end row-->
             </div><!--end container-->
         </section><!--end section-->
