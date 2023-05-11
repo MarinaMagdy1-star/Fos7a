@@ -51,19 +51,19 @@ $place = mysqli_fetch_assoc($result);
                             while($result = mysqli_fetch_array($images_query)){
                             ?>
                             <div class="tiny-slide">
-                                <img src="Images/<?= $result['image_1_url'] ?>" class="img-fluid " alt="">
+                                <img src="Images/<?= $result['image_1_url'] ?>" class="more_images" alt="">
                             </div>
                             <div class="tiny-slide">
-                                <img src="Images/<?= $result['image_2_url'] ?>" class="img-fluid " alt="">
+                                <img src="Images/<?= $result['image_2_url'] ?>" class="more_images" alt="">
                             </div>
                             <div class="tiny-slide">
-                                <img src="Images/<?= $result['image_3_url'] ?>" class="img-fluid " alt="">
+                                <img src="Images/<?= $result['image_3_url'] ?>" class="more_images" alt="">
                             </div>
                             <div class="tiny-slide">
-                                <img src="Images/<?= $result['image_4_url'] ?>" class="img-fluid " alt="">
+                                <img src="Images/<?= $result['image_4_url'] ?>" class="more_images" alt="">
                             </div>
                             <div class="tiny-slide">
-                                <img src="Images/<?= $result['image_5_url'] ?>" class="img-fluid " alt="">
+                                <img src="Images/<?= $result['image_5_url'] ?>" class="more_images" alt="">
                             </div>
                             
                             <?php

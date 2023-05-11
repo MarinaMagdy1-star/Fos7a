@@ -27,7 +27,14 @@
 
 .img-fluid {
   height: 250px;
-  width: 250px;
+  width: 300px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.more_images {
+  height: 500px;
+  width: 1000px;
   -o-object-fit: cover;
      object-fit: cover;
 }
