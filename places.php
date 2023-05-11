@@ -30,19 +30,19 @@
                     }
                     
                     if ($category == 1) {
-                        echo '<h4 class="title mb-3">Touristic Places</h4>
+                        echo '<h4 class="title ">Touristic Places</h4>
                             <p class="text-muted para-desc mx-auto mb-0">Touristic Places are places that people visit for pleasure and interest, usually while they are on holiday</p>';
                     } elseif ($category == 2) {
-                        echo '<h4 class="title mb-3">Co Working Places</h4>
+                        echo '<h4 class="title ">Co Working Places</h4>
                             <p class="text-muted para-desc mx-auto mb-0">Co Working Places are places where people can work in a shared environment with other professionals</p>';
                     } elseif ($category == 3) {
-                        echo '<h4 class="title mb-3">Restaurants & cafes</h4>
+                        echo '<h4 class="title ">Restaurants & cafes</h4>
                             <p class="text-muted para-desc mx-auto mb-0">Restaurants & cafes are places where people can eat and drink, usually with friends and family</p>';
                     } elseif ($category == 4) {
-                        echo '<h4 class="title mb-3">Adventure Places</h4>
+                        echo '<h4 class="title ">Adventure Places</h4>
                             <p class="text-muted para-desc mx-auto mb-0">Adventure Places are places where people can experience thrilling activities such as hiking, rock climbing, and water sports</p>';
                     } else {
-                        echo '<h4 class="title mb-3">Touristic Places</h4>
+                        echo '<h4 class="title ">Touristic Places</h4>
                             <p class="text-muted para-desc mx-auto mb-0">Touristic Places are places that people visit for pleasure and interest, usually while they are on holiday</p>';
                     }
                     ?>

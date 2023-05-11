@@ -3,7 +3,7 @@
 
 <?php include("php-includes/head-tags.php"); ?>
 
-<body>
+<body class="payment">
 
 <?php include("php-includes/navbar.php"); ?>
 
@@ -108,7 +108,7 @@ if (isset($_POST['payment_submit'])){
                             <form method="post" enctype="multipart/form-data">
                                
                                 <div class="row">
-        <center><h3>payment </h3></center>
+        <center><h3 class="title">payment </h3></center>
 
                                         <div class="col-md-6">
                                         <br><br>

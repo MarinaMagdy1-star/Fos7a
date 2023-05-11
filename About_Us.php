@@ -63,4 +63,8 @@
 
         
             
-
+<br><br><br>
+            <?php include("php-includes/footer.php"); ?>
+            <?php include("php-includes/scripts.php"); ?>
+</body>
+</html>

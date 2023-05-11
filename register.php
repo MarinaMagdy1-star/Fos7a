@@ -22,7 +22,7 @@
                 <div class="row justify-content-center">
                     <div class="col-lg-8">
                         <div class="section-title mb-5 pb-2 text-center">
-                            <h4 class="title mb-3">Register</h4>
+                            <h4 class="title">Register</h4>
                         </div>
                         <div class="custom-form">
                             <form action="php-functions/register-handle.php" method="post">

@@ -52,9 +52,10 @@ if (isset($_POST['place_information'])){
                                     <?php endif; unset($_SESSION['error']); ?>
                                     
 
-                                    <h3>Place Information:</h3>
+                                   <center> <h3 class="title">Place Information:</h3></center>
 
                                     <div class="col-md-6">
+                                        <br><br>
                                         <div class="mb-3">
                                             <label class="form-label">Place Name <span class="text-danger">*</span></label>
                                                 <input name="Place_name" id="Place_name" type="name" class="form-control" required>
@@ -62,6 +63,7 @@ if (isset($_POST['place_information'])){
                                     </div><!--end col-->
 
                                     <div class="col-md-6">
+                                        <br><br>
                                         <div class="mb-3">
                                             <label class="form-label">Your Place Location <span class="text-danger">*</span></label>
                                                 <input name="location" id="location" type="url" class="form-control" required>
