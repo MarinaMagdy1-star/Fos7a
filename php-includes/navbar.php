@@ -1,4 +1,3 @@
-<?php require_once("php-functions/connection.php"); ?>
 
 
  <!-- Navbar STart -->
@@ -68,6 +67,7 @@
                                    <li><a href="signUp_PlaceOwner.php" class="sub-menu-item">Sign Up</a></li>
                                    <li><a href="login.php" class="sub-menu-item">Login</a></li>
                                    <?php }else{ ?>
+                                       <li><a href="placeowner_profile.php" class="sub-menu-item">My requests</a></li>
                                        <li><a href="logout.php" class="sub-menu-item">Logout</a></li>
                                        <?php } ?>
 

@@ -32,8 +32,9 @@ include('php-functions/places_function.php')
                 <thead>
                     <tr>
                         <th>#</th>
-                        <th>name</th>
-                        <th>status</th>
+                        <th>Name</th>
+                        <th>Owner name</th>
+                        <th>Status</th>
                         <!-- <th>category</th>
                         <th>region</th>
                         <th>prices</th>
@@ -50,11 +51,11 @@ include('php-functions/places_function.php')
                 <tbody>
                     <?php 
 
-                    $places = "SELECT * from `places`";
+                    $places = "SELECT places.* , place_owner.name AS place_owner_name FROM `places` INNER join place_owner ON place_owner.pid = places.owner_id";
                     $places_query = mysqli_query($conn, $places) or die('users_error'.mysqli_error());
 
                     while($result = mysqli_fetch_array($places_query)){
-                        if($result['place_status'] == 1){
+                        if($result['place_status'] == 2){
                             $status = "<span class='badge badge-success'>Accepted</span> ";
                         }else{
                             $status = "<span class='badge badge-danger'>Rejected</span> ";
@@ -63,6 +64,7 @@ include('php-functions/places_function.php')
                     <tr>
                         <td class="text-bold-500">#<?php echo $result['id'] ?></td>
                         <td><?php echo $result['name'] ?></td>
+                        <td><?php echo $result['place_owner_name'] ?></td>
                         <td><?php echo $status ?></td>
                         <td class="d-flex">
 
@@ -72,10 +74,10 @@ include('php-functions/places_function.php')
                         <form  method="post">
                             <input type="hidden" name="id" id="id" value="<?php echo $result['id'] ?>">
                             <button name="accept_place" type="submit" class="pl-0 btn btn-success" onclick="return confirm('Are you want to accept <?php echo $result['name']
-                                ?>')"><i class="la la-check font-medium-1"></i></button>
+                                ?>')"><i class="fa fa-check font-medium-1"></i></button>
                         
                             <button name="reject_place" type="submit" class="pl-0 btn btn-danger" onclick="return confirm('Are you want to reject <?php echo $result['name']
-                                ?>')"><i class="la la-times font-medium-1"></i></button>
+                                ?>')"><i class="fa fa-times font-medium-1"></i></button>
                         </form>
                         </td>
                     </tr>

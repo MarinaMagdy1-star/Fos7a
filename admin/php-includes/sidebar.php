@@ -40,7 +40,7 @@
             <li class="nav-item">
                 <a href="places.php">
                     <div class="row no-gutters justify-content-between align-items-center">
-                        <span class="menu-title" data-i18n="">places</span>
+                        <span class="menu-title" data-i18n="">places owner requests</span>
                         <i class="fa fa-angle-right"></i>
                     </div>
                 </a>
@@ -48,7 +48,7 @@
             <li class="nav-item">
                 <a href="placeowner.php">
                     <div class="row no-gutters justify-content-between align-items-center">
-                        <span class="menu-title" data-i18n="">place owner requests</span>
+                        <span class="menu-title" data-i18n="">place owners</span>
                         <i class="fa fa-angle-right"></i>
                     </div>
                 </a>

@@ -53,13 +53,13 @@ include('php-functions/regions_function.php')
                         <td class="d-flex">
 
 
-                        <button  data-toggle="modal" data-target="#update_category<?php echo $result['rid'] ?>" class="pl-0 btn btn-info"><i class="badge-circle badge-circle-light-secondary la la-edit font-medium-1"></i></button>
+                        <button  data-toggle="modal" data-target="#update_category<?php echo $result['rid'] ?>" class="pl-0 btn btn-info"><i class=" fa fa-edit font-medium-1"></i></button>
 
 
                         <form  method="post">
                             <input type="hidden" name="rid" id="rid" value="<?php echo $result['rid'] ?>">
                             <button name="delete_region" type="submit" class="pl-0 btn btn-danger" onclick="return confirm('Are you want to delete <?php echo $result['rname']
-                                ?>')"><i class="la la-trash font-medium-1"></i></button>
+                                ?>')"><i class="fa fa-trash font-medium-1"></i></button>
                         </form>
                         </td>
                     </tr>

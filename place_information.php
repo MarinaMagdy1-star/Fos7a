@@ -4,19 +4,20 @@ if (isset($_POST['place_information'])){
     $Place_name = mysqli_real_escape_string($conn,$_POST['Place_name']);
     $location = mysqli_real_escape_string($conn,$_POST['location']);
     $region = mysqli_real_escape_string($conn,$_POST['region']);
-    $category = mysqli_real_escape_string($conn,$_POST['category']);
+    $category = $_POST['category'];
     $description = mysqli_real_escape_string($conn,$_POST['comment']);
+    $price = $_POST['price'];
     $images = time() . '-' . $_FILES["placeimages"]["name"];
     $target_dir = "Images/";
     $target_file = $target_dir . basename($images);
     move_uploaded_file($_FILES["placeimages"]["tmp_name"], $target_file);
-    $sql = "INSERT INTO places (`name`, `category`, `region`, `location`, `description`,`images`,`owner_id`,`place_status`)
-      VALUES('$Place_name','$category','$region','$location','$description','$images',".$_SESSION['placeowner_id'].", 1)";
+    $sql = "INSERT INTO places (`name`, `category`, `region`, `location`, `description`,`images`,`owner_id`,`place_status`, `pricesp`)
+      VALUES('$Place_name','$category','$region','$location','$description','$images',".$_SESSION['placeowner_id'].", 1 , '$price')";
     if (mysqli_query($conn, $sql)){
         echo "New record created successfully";
 
 
-    header('location: more_images.php?place_id='.mysqli_insert_id($conn));
+        header('location: more_images.php?place_id='.mysqli_insert_id($conn));
     } else {
         echo "Error: " .$sql . "<br>" .mysqli_error($conn);
     }
@@ -79,7 +80,7 @@ if (isset($_POST['place_information'])){
                                         <div class="mb-3">
                                             <label class="form-label">Place Category <span class="text-danger">*</span></label>
                                             <br>
-                                               <select name="category" required>
+                                               <select name="category" required class="form-control">
                                                <?php 
 
 

@@ -1,11 +1,5 @@
-<?php require_once("php-functions/connection.php"); 
-$users = "SELECT * FROM `users`";
-$users_query= mysqli_query($conn, $users);
-if(!$users_query){
-    die('Error in counts of users'. mysqli_error($conn));
-}else{
-    $userId = mysqli_num_rows($users_query);
-}
+<?php require_once("php-functions/connection.php");
+include('php-functions/dashboard_function.php') ;
 ?>
 
 
@@ -58,7 +52,7 @@ if(!$users_query){
                                                 </div>
                                                 <div class="card-content pt-0 pb-2 collapse show">
                                                     <div class="card-body p-0">
-                                                        <h4 class="mb-0 text-white"><?php echo $salonsId ?></h4>
+                                                        <h4 class="mb-0 text-white"><?php echo $places_count ?></h4>
                                                     </div>
                                                 </div>
                                             </div>
@@ -71,7 +65,7 @@ if(!$users_query){
                                                 </div>
                                                 <div class="card-content pt-0 pb-2 collapse show">
                                                     <div class="card-body p-0">
-                                                        <h4 class="mb-0 text-white"><?php echo $appointmentId ?></h4>
+                                                        <h4 class="mb-0 text-white"><?php echo $place_owner_count ?></h4>
                                                     </div>
                                                 </div>
                                             </div>

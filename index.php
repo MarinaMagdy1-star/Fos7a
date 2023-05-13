@@ -1,7 +1,11 @@
+<?php require_once("php-functions/connection.php"); ?>
+
 <!DOCTYPE html>
 <html>
+<head>
 
-<?php include("php-includes/head-tags.php"); ?>
+    <?php include("php-includes/head-tags.php"); ?>
+</head>
 <body>
 
 <?php include("php-includes/navbar.php"); ?>
@@ -62,7 +66,7 @@
                                             <h1 class="display-1 fw-semibold text-uppercase mb-3 text-white text-shadow-dark-lg title-dark animated fadeInUpBig animation-delay-3">Adventure Places</h1>
                                             <p class="para-desc text-white-50 para-dark mx-auto animated fadeInUpBig animation-delay-5">Adventure Places offering a variety of outdoor entertainments involving physical challenges & often undertaken to create psychological arousal.</p>
                                             <div class="mt-4 pt-2 animated fadeInUpBig animation-delay-7">
-                                                <a href="places.php?category_id=3" class="btn btn-font-sm btn-pills-0 btn-lg btn-light text-uppercase mt-2">View More</a>
+                                            <a href="places.php?category_id=3" class="btn btn-font-sm btn-pills-0 btn-lg btn-light text-uppercase mt-2">View More</a>
                                             </div>
                                         </div>
                                     </div><!--end col-->

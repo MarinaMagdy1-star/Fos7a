@@ -1,32 +1,38 @@
 <!DOCTYPE>
 <html>
+<?php require_once("php-functions/connection.php");
+if (isset($_POST['payment_submit'])){
+    $type_of_payment = mysqli_real_escape_string($conn,$_POST['type_payment']);
+    $images = time() . '-' . $_FILES["invoice"]["name"];
+    $target_dir = "Images/";
+    $target_file = $target_dir . basename($images);
+    move_uploaded_file($_FILES["invoice"]["tmp_name"], $target_file);
+    $sql = "INSERT INTO  subscriptions (`place_owner_id`, `place_id`,`amount`, `type_of_payment`,`image`)
+      VALUES(".$_SESSION['placeowner_id'].", ".$_GET['place_id'].",'1700','$type_of_payment ','$images')";
+    if (mysqli_query($conn, $sql)){
+        header('Location: placeowner_profile.php');
+        // echo "New rec\ord created successfully";
 
-<?php include("php-includes/head-tags.php"); ?>
+
+    } else {
+        echo "Error: " .$sql . "<br>" .mysqli_error($conn);
+    }
+    // mysqli_close($conn);
+   }
+
+
+?>
+
+<head>
+    <?php include("php-includes/head-tags.php"); ?>
+
+</head>
 
 <body>
 
 <?php include("php-includes/navbar.php"); ?>
 
-<?php
-if (isset($_POST['payment_submit'])){
-    $type_of_payment = mysqli_real_escape_string($conn,$_POST['type_of_payment']);
-    $images = time() . '-' . $_FILES["placeimages"]["name"];
-    $target_dir = "Images/";
-    $target_file = $target_dir . basename($images);
-    move_uploaded_file($_FILES["placeimages"]["tmp_name"], $target_file);
-    $sql = "INSERT INTO  subscriptions (`place_owner_id`, `place_id`, `type_of_payment`,`images`)
-      VALUES(".$_SESSION['placeowner_id'].", ".$_GET['place_id'].",'$type_of_payment ','$images')";
-    if (mysqli_query($conn, $sql)){
-        echo "New record created successfully";
 
-
-    header('location: more_images.php?place_id='.mysqli_insert_id($conn));
-    } else {
-        echo "Error: " .$sql . "<br>" .mysqli_error($conn);
-    }
-    mysqli_close($conn);
-   }
-   ?>
 
 <!-- Start -->
 <!-- <section class="section">
@@ -105,10 +111,10 @@ if (isset($_POST['payment_submit'])){
                         
 
                         <div class="custom-form" >
-                            <form method="post" enctype="multipart/form-data">
+                            <form method="POST" enctype="multipart/form-data">
                                
                                 <div class="row">
-        <center><h3>payment </h3></center>
+                                    <center><h3>payment </h3></center>
 
                                         <div class="col-md-6">
                                         <br><br>
@@ -140,7 +146,7 @@ if (isset($_POST['payment_submit'])){
                                         </div><!--end col-->
 
 
-
+</form>
 
 
 

@@ -1,4 +1,6 @@
-<!DOCTYPE>
+<?php require_once("php-functions/connection.php"); ?>
+
+<!DOCTYPE html>
 <html>
 
 <?php include("php-includes/head-tags.php"); ?>
@@ -61,6 +63,10 @@
             </div> <!--end container--> 
 
 
-        
+   <?php include("php-includes/footer.php"); ?>
+    <?php include("php-includes/scripts.php"); ?>
+    
+ </body>
+</html>
             
 

@@ -1,7 +1,17 @@
+<?php require_once("php-functions/connection.php"); ?>
 <!DOCTYPE>
 <html>
+<head>
+    <?php include("php-includes/head-tags.php"); ?>
 
-<?php include("php-includes/head-tags.php"); ?>
+</head>
+<?php
+
+// $sql_query = "SELECT * FROM `place_owner` WHERE pid = 23;";
+// $result =  mysqli_query($conn,$sql_query);
+// $place = mysqli_fetch_assoc($result);
+?>
+
 
 <body>
 <?php include("php-includes/navbar.php"); ?>
@@ -22,15 +32,84 @@
                         </ul>
                     </nav>
                 </div>
+                
                 </div><!--end row-->
             </div><!--end container-->
         </section><!--end section-->
         <!-- Hero End -->
         <br><br>
-<center><nav>
-<h1 class="placeowner_profile">You are one of us now. </h1>
+        
+<!--         
+        <section>
+            <div class="container">
+        <center>
+            <nav>
 
-</nav></center>
+        <dl class="row mb-0">
+            <dt class="col-md-4 fw-medium col-5">Name</dt>
+        
+            <dd class="col-md-8 col-7 text-muted"><?php echo $place ['name']  ?></dd>
+        
+            <dt class="col-md-4 fw-medium col-5">Your Email:</dt>
+            <dd class="col-md-8 col-7 text-muted"><?php echo $place ['email']  ?></dd>
+        
+            <dt class="col-md-4 fw-medium col-5"> YourNumber</dt>
+            <dd class="col-md-8 col-7 text-muted"><?php echo $place ['phone']  ?></dd>
+        
+            <dt class="col-md-4 fw-medium col-5"></dt>
+            <dd class="col-md-8 col-7 text-muted"></dd>
+        </dl>
+        </nav>
+        <h1 class="placeowner_profile">You are one of us now. </h1>
+    </center>
+    </div>
+</section> -->
+
+<section>
+            <div class="container">
+                <a href="place_information.php" class="btn btn-primary">Add places </a>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Name</th>
+                            <th>status</th>
+                            <th>Category</th>
+                            <th>image</th>
+                            <th>description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <?php
+                            $select_places = "SELECT places.* , categories.type_of_place AS category_name FROM `places` inner join categories on categories.cid = places.category  WHERE owner_id = ".$_SESSION['placeowner_id']."";
+                            $select_places_q = mysqli_query($conn, $select_places) OR die('Error on places'.mysqli_error($conn));
+                            while($result = mysqli_fetch_array($select_places_q)){
+
+                            if($result['place_status'] == 1){
+                                $status = "<span class='badge btn-warning'>Pending</span>";
+                            }elseif($result['place_status'] == 2){
+                                $status = "<span class='badge btn-success'>Approved</span>";
+
+                            }
+                        ?>
+                        <tr>
+                            <!-- <td><?= $_SESSION['placeowner_id'] ?></td> -->
+                            <td><?= $result['id'] ?></td>
+                            <td><?= $result['name'] ?></td>
+                            <td><?= $status ?></td>
+                            <td><?= $result['category_name'] ?></td>
+                            <td><img height="100px" width="100px" src="Images/<?= $result['images'] ?>" alt="<?= $result['name'] ?>"/></td>
+                            <td><?= $result['description'] ?></td>
+                        </tr>
+                        <?php 
+                            }
+                        ?>
+
+                    </tbody>
+                </table>
+
+            </div>
+</section>
 
 
 

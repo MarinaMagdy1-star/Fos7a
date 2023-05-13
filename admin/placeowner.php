@@ -33,8 +33,8 @@ include('php-functions/placeowner_function.php')
                     <tr>
                         <th>#</th>
                         <th>name</th>
-                        <th>status</th>
-                        <!-- <th>category</th>
+                        <!--<th>status</th>
+                         <th>category</th>
                         <th>region</th>
                         <th>prices</th>
                         <th>location</th>
@@ -54,30 +54,12 @@ include('php-functions/placeowner_function.php')
                     $places_query = mysqli_query($conn, $places) or die('users_error'.mysqli_error());
 
                     while($result = mysqli_fetch_array($places_query)){
-                        if($result['status'] == 1){
-                            $status = "<span class='badge badge-success'>Accepted</span> ";
-                        }else{
-                            $status = "<span class='badge badge-danger'>Rejected</span> ";
-                        }
+                       
                     ?>
                     <tr>
                         <td class="text-bold-500">#<?php echo $result['pid'] ?></td>
                         <td><?php echo $result['name'] ?></td>
-                        <td><?php echo $status ?></td>
-                        <td class="d-flex">
-
-
-                        <!-- <button  data-toggle="modal" data-target="#update_place<?php echo $result['id'] ?>" class="pl-0 btn btn-info"><i class="badge-circle badge-circle-light-secondary la la-edit font-medium-1"></i></button> -->
-
-                        <form  method="post">
-                            <input type="hidden" name="pid" id="pid" value="<?php echo $result['pid'] ?>">
-                            <button name="accept_place" type="submit" class="pl-0 btn btn-success" onclick="return confirm('Are you want to accept <?php echo $result['name']
-                                ?>')"><i class="la la-check font-medium-1"></i></button>
                         
-                            <button name="reject_place" type="submit" class="pl-0 btn btn-danger" onclick="return confirm('Are you want to reject <?php echo $result['name']
-                                ?>')"><i class="la la-times font-medium-1"></i></button>
-                        </form>
-                        </td>
                     </tr>
                     <?php
                     }
