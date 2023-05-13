@@ -3,6 +3,16 @@
   font-family: Copperplate, Papyrus, fantasy;
 }
 
+.title {
+  font-family: Lucida Sans;
+}
+
+body.payment {
+  background-image: url(Images/images.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
 .video {
   width: 1000px;
   height: 1700px;

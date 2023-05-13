@@ -31,7 +31,7 @@
                 <div class="row justify-content-center">
                     <div class="col-lg-8">
                         <div class="section-title mb-5 pb-2 text-center">
-                            <h4 class="title mb-3">Sign Up</h4>
+                        <h3 class="title">Personal Information:</h3>
                         </div>
                         <div class="custom-form">
                         <form method="post">
@@ -46,7 +46,7 @@
                                     <?php endif; unset($_SESSION['error']); ?>
 
                                 
-                                    <h3>Personal Information:</h3>
+                                    
                                     
 
                                     <div class="col-md-6">

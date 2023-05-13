@@ -59,7 +59,7 @@ if(isset($_POST['more_images'])){
                                
                                 <div class="row">
 
-    <center><h3>Add your place images:</h3></center>
+    <center><h3 class="title">Add your place images:</h3></center>
 
 
                                          <div class="col-md-6">

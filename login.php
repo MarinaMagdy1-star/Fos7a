@@ -18,7 +18,7 @@ include('php-functions/login-handle.php');
                 <div class="row justify-content-center">
                     <div class="col-lg-8">
                         <div class="section-title mb-5 pb-2 text-center">
-                            <h4 class="title mb-3"> PlaceOwner Login</h4>
+                            <h4 class="title"> PlaceOwner Login</h4>
                         </div>
                         <div class="custom-form">
                             <form  method="POST">

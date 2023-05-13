@@ -31,7 +31,7 @@
             <div class="container">
                 <div class="row align-items-center">
                     <div class="col-lg-5 col-md-6">
-                    <img src="assets/images/Fosحa logo.jpg" class="img-fluid rounded shadow" alt="">
+                    <img src="assets/images/Fosحa logo.jpg" class="img" alt="">
                   <!-- <video id="video" autoplay loop muted src="assets/images/Co_Working places.mp4" type="video/mp4"  class="img-fluid rounded shadow"> </video>
                      --> 
                     </div><!--end col-->
@@ -69,4 +69,8 @@
  </body>
 </html>
             
-
+<br><br><br>
+            <?php include("php-includes/footer.php"); ?>
+            <?php include("php-includes/scripts.php"); ?>
+</body>
+</html>
