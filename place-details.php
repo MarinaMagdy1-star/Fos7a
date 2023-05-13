@@ -83,7 +83,23 @@ $place = mysqli_fetch_assoc($result);
                             <p class="text-muted"> <?php echo $place ['description']  ?>  .</p>
                             <p class="text-muted mb-0">.</p>
                         </div>
+
+                        
+                         <div class="center">
+                                <b>Reviews</b>
+                                <div class="star-rating">
+                            <input type="radio" id="star5" name="rating" value="5"><label for="star5" title="Excellent"></label>
+                            <input type="radio" id="star4" name="rating" value="4"><label for="star4" title="Good"></label>
+                            <input type="radio" id="star3" name="rating" value="3"><label for="star3" title="Average"></label>
+                             <input type="radio" id="star2" name="rating" value="2"><label for="star2" title="Poor"></label>
+                             <input type="radio" id="star1" name="rating" value="1"><label for="star1" title="Terrible"></label>
+                                </div>
+
+
+                               </div>
                     </div><!--end col-->
+                    
+                    
 
                     <div class="col-lg-4 col-md-6 mt-4 pt-2 mt-sm-0 pt-sm-0">
                         <div class="section-title">

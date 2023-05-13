@@ -70,7 +70,7 @@
                                 <a href="place-details.php?placeid=<?php echo $place['id'] ?>" class="link text-dark">Read More <i class="uil uil-arrow-right align-middle"></i></a>
                             </div>
 
-                            <div class="center">
+                            <!-- <div class="center">
                                 <b>Reviews</b>
                                 <div class="star-rating">
                             <input type="radio" id="star5" name="rating" value="5"><label for="star5"></label>
@@ -81,7 +81,7 @@
                                 </div>
 
 
-                               </div>
+                               </div> -->
 
 
                         </div>

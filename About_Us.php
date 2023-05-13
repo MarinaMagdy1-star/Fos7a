@@ -55,21 +55,21 @@
 
         
             <div class="container-fluid px-0 mt-100 mt-60">
+                <br><br><br><br>
                 <div class="bg-half-260" >
                     <div class="play-icon">
                     <video src="assets/images/Co_Working places.mp4" autoplay loop muted data-type="video/mp4" class="video">
+                    
                     </div>
+                    
                 </div>
+               
             </div> <!--end container--> 
 
 
-   <?php include("php-includes/footer.php"); ?>
-    <?php include("php-includes/scripts.php"); ?>
-    
- </body>
-</html>
+ 
             
-<br><br><br>
+<br><br><br><br><br><br><br>
             <?php include("php-includes/footer.php"); ?>
             <?php include("php-includes/scripts.php"); ?>
 </body>
