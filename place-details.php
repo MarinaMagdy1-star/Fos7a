@@ -84,7 +84,7 @@ $place = mysqli_fetch_assoc($result);
                             <p class="text-muted mb-0">.</p>
                         </div>
 
-                        
+                        <form method="post">
                          <div class="center">
                                 <b>Reviews</b>
                                 <div class="star-rating">
@@ -94,11 +94,14 @@ $place = mysqli_fetch_assoc($result);
                              <input type="radio" id="star2" name="rating" value="2"><label for="star2" title="Poor"></label>
                              <input type="radio" id="star1" name="rating" value="1"><label for="star1" title="Terrible"></label>
                                 </div>
+                                <textarea name="review" id="review" ></textarea>
+                                <button type="review" id="review" name="review" class="btn btn-dark">Review</button>
 
 
                                </div>
                     </div><!--end col-->
-                    
+
+                    </form>
                     
 
                     <div class="col-lg-4 col-md-6 mt-4 pt-2 mt-sm-0 pt-sm-0">
