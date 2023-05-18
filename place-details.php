@@ -78,7 +78,7 @@ $place = mysqli_fetch_assoc($result);
                 <div class="row">
                     <div class="col-lg-8 col-md-6">
                         <div class="section-title me-md-4">
-                            <h4 class="title mb-4">Project Description</h4>
+                            <h4 class="title mb-4">Place Description</h4>
     
                             <p class="text-muted"> <?php echo $place ['description']  ?>  .</p>
                             <p class="text-muted mb-0">.</p>

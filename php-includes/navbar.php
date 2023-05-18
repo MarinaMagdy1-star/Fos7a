@@ -115,6 +115,9 @@
                             <a href="favorites.php">Favourites</a><span class="menu-arrow"></span>                                
                             </li>
                             <?php }?>
+                            <li class="has-submenu parent-parent-menu-item">
+                            <a href="ar/">عربي</a><span class="menu-arrow"></span>                                
+                            </li>
                             
                          </li>
                     </ul><!--end navigation menu-->

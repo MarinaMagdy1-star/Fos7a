@@ -1,0 +1,159 @@
+*{
+    direction: rtl;
+    text-align: right;
+}
+
+.text-light{
+text-align: center;
+}
+
+.text-white{
+    text-align: center;
+    }
+
+
+
+.title{
+    font-family: Lucida Sans ;
+   
+}
+
+
+body.payment{
+  background-image: url(Images/images.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+
+.video{
+
+    width:1400px;
+    height: 1700px;
+};
+
+.favorite-btn{    
+    position:absolute;
+    top: 16px;
+    right: 16px;
+    z-index: 10;
+    background-color: white;
+    display: grid;
+    place-items: center;
+    border: 1px solid #FFD700;
+    border-radius: 4px;
+    padding: 8px;
+    svg{
+        fill:#FFD700
+
+    }
+    &:hover{
+        background-color: #FFD700;
+        svg{
+            fill:white
+        }
+    }
+}
+
+.img-fluid  {
+    height: 250px;
+    width: 300px; ;
+    object-fit: cover;
+}
+
+.img{
+  height: 450px;
+  width: 400px;
+}
+
+
+.more_images{
+height: 500px;
+width: 1000px;
+object-fit: cover;
+}
+
+
+.placeowner_profile {
+    font-family:Copperplate, Papyrus, fantasy;
+}
+
+
+.star-rating {
+    display: inline-block;
+    direction: rtl; /* set direction to right-to-left */
+  }
+  
+  .star-rating input[type="radio"] {
+    display: none;
+  }
+  
+  .star-rating label {
+    font-size: 30px;
+    color: #ccc;
+    cursor: pointer;
+    display: inline-block;
+    padding: 0 5px;
+    margin: 0;
+  }
+  
+  .star-rating label:before {
+    content: "\2605";
+  }
+  
+  .star-rating input[type="radio"]:checked ~ label {
+    color: #ffcc00;
+  }
+
+  label:hover,
+  label:hover ~ label {
+    color: #ffcc00;
+  }
+ 
+  
+
+
+  
+  
+  
+ 
+  
+
+
+// .center{
+// position: absolute;
+// left: 30%;
+// transform: translate(-50%,-50%);
+// };
+
+// .stars label {
+// font-size: 50%
+// };
+
+// .stars label:before{
+// content:''
+// };
+
+// .stars input:checked label{
+// color: gold
+// };
+
+// .stars #five:checked .result:before{
+// content:"I love it"
+// };
+
+// .stars #four:checked .result:before{
+//     content:"I like it"
+//     };
+
+// .stars #three:checked .result:before{
+//  content:"It's good"
+// };
+
+// .stars #two:checked .result:before{
+// content:"I don't like it"
+// };
+
+// .stars #one:checked .result:before{
+// content:"I hate it"
+// };
