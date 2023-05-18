@@ -114,11 +114,7 @@ if (isset($_POST['payment_submit'])){
                             <form method="POST" enctype="multipart/form-data">
                                
                                 <div class="row">
-<<<<<<< HEAD
-                                    <center><h3>payment </h3></center>
-=======
         <center><h3 class="title">payment </h3></center>
->>>>>>> 2d7c3d9c87fafb8ef68816217b05e632a2152c3b
 
                                         <div class="col-md-6">
                                         <br><br>

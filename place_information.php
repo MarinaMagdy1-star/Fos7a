@@ -11,7 +11,7 @@ if (isset($_POST['place_information'])){
     $target_dir = "Images/";
     $target_file = $target_dir . basename($images);
     move_uploaded_file($_FILES["placeimages"]["tmp_name"], $target_file);
-    $sql = "INSERT INTO places (`name`, `category`, `region`, `location`, `description`,`images`,`owner_id`,`place_status`, `pricesp`)
+    $sql = "INSERT INTO places (`name`, `category`, `region`, `location`, `description`,`images`,`owner_id`,`place_status`, `prices`)
       VALUES('$Place_name','$category','$region','$location','$description','$images',".$_SESSION['placeowner_id'].", 1 , '$price')";
     if (mysqli_query($conn, $sql)){
         echo "New record created successfully";
