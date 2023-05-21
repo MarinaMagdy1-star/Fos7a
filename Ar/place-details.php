@@ -1,4 +1,6 @@
 <?php require_once("php-functions/connection.php"); ?>
+<?php $conn->set_charset("utf8"); ?>
+
 <?php
 $placeId = $_GET['placeid'];
 $sql_query = "SELECT * FROM `places` WHERE id = $placeId;";
@@ -30,7 +32,7 @@ $place = mysqli_fetch_assoc($result);
 
                             <div class="card-body content">
                                 <a href="blog-detail-four.html" class="h5 title text-dark d-block mb-0"><?php echo $place['name'] ?></a>
-                                <p class="text-muted mt-2 mb-2"><?php echo $place['region'] ?></p>
+                                <p class="text-muted mt-2 mb-2"><?php echo $place['region_ar'] ?></p>
                             </div>
                         </div>
                     </div>
@@ -80,10 +82,24 @@ $place = mysqli_fetch_assoc($result);
                         <div class="section-title me-md-4">
                             <h4 class="title mb-4">وصف المكان</h4>
     
-                            <p class="text-muted"> <?php echo $place ['description']  ?>  .</p>
+                            <p class="text-muted"> <?php echo $place ['description_ar']  ?>  .</p>
                             <p class="text-muted mb-0">.</p>
                         </div>
+                        <?php
+if (isset($_GET['review'])){
+    $Rating = mysqli_real_escape_string($conn,$_GET['Rating']);
+ 
+    $sql = "INSERT INTO places (`rating`)
+      VALUES('$Rating')";
+    if (mysqli_query($conn, $sql)){
+        echo "Done";
 
+    } else {
+        echo "Error: " .$sql . "<br>" .mysqli_error($conn);
+    }
+    mysqli_close($conn);
+   }
+   ?>
                         <form method="post">
                          <div class="center">
                                 <b>Reviews</b>
@@ -96,6 +112,7 @@ $place = mysqli_fetch_assoc($result);
                                 </div>
                                 <textarea name="review" id="review" ></textarea>
                                 <button type="review" id="review" name="review" class="btn btn-dark">Review</button>
+                                
 
 
                                </div>
@@ -118,7 +135,7 @@ $place = mysqli_fetch_assoc($result);
                             <dd class="col-md-8 col-7 text-muted"><?php echo $place ['location']  ?></dd>
 
                             <dt class="col-md-4 fw-medium col-5">المنطقه</dt>
-                            <dd class="col-md-8 col-7 text-muted"><?php echo $place ['region']  ?></dd>
+                            <dd class="col-md-8 col-7 text-muted"><?php echo $place ['region_ar']  ?></dd>
 
                             <dt class="col-md-4 fw-medium col-5"></dt>
                             <dd class="col-md-8 col-7 text-muted"></dd>

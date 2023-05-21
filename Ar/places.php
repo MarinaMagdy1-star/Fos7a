@@ -1,9 +1,10 @@
 <?php require_once("php-functions/connection.php"); ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
 <?php include("php-includes/head-tags.php"); ?>
-
+<?php $conn->set_charset("utf8"); ?>
 <body>
 <?php include("php-includes/navbar.php"); ?>
 
@@ -17,7 +18,7 @@
                     
                     if (isset($_GET['category_id'])) {
                         $category_id = $_GET['category_id'];
-                        $select_category = "SELECT * FROM `categories` WHERE cid='$category_id '";
+                        $select_category = "SELECT `cid`, `type_of_place_ar`,`description_ar` FROM `categories`";
                         $selecy_cate_q = mysqli_query($conn, $select_category) or die('Error in cat'.mysqli_error($conn));
                         $result_cate = mysqli_fetch_array($selecy_cate_q);
 
@@ -48,9 +49,11 @@
                     //     echo '<h4 class="title mb-3">Touristic Places</h4>
                     //         <p class="text-muted para-desc mx-auto mb-0">Touristic Places are places that people visit for pleasure and interest, usually while they are on holiday</p>';
                     // }
+                    
                     ?>
-                    <h4 class="title mb-3"><?= $result_cate['type_of_place'] ?></h4>
-                    <p class="text-muted para-desc mx-auto mb-0"><?= $result_cate['description'] ?></p>
+                  
+                    <h4 class="title mb-3"><?= $result_cate['type_of_place_ar'] ?></h4>
+                    <p class="text-muted para-desc mx-auto mb-0"><?= $result_cate['description_ar'] ?></p>
                 </div>
 
 
@@ -81,7 +84,7 @@
                                 
 
                                 <div class="blog-tag">
-                                    <a href="javascript:void(0)" class="badge bg-dark"><?php echo $place['name'] ?></a>
+                                    <a href="javascript:void(0)" class="badge bg-dark"><?php echo $place['name_ar'] ?></a>
                                 </div>
                             </div>
                             
@@ -94,8 +97,10 @@
                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bookmark-heart-fill" viewBox="0 0 16 16">
                                     <path d="M2 15.5a.5.5 0 0 0 .74.439L8 13.069l5.26 2.87A.5.5 0 0 0 14 15.5V2a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v13.5zM8 4.41c1.387-1.425 4.854 1.07 0 4.277C3.146 5.48 6.613 2.986 8 4.412z"/>
                                     </svg>
-                                </button
-                                <p class="h5 title text-dark d-block mb-0"><?php echo $place['name'] ?></p>
+                    </button>
+                                <p>
+                                 <class="h5 title text-dark d-block mb-0"><?php echo $place['name_ar'] ?>
+                                </p>
                                 
                                 <a href="place-details.php?placeid=<?php echo $place['id'] ?>" class="link text-dark">قرائه المزيد <i class="uil uil-arrow-right align-middle"></i></a>
                             </div>

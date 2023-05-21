@@ -1,16 +1,19 @@
 
 
  <!-- Navbar STart -->
+ <?php $conn->set_charset("utf8"); ?>
+
  <header id="topnav" class="defaultscroll sticky">
             <div class="container">
             
-
+ 
            
 
 
 <!-- End Logo container-->
 <div class="menu-extras">
         <header>
+        
                     <div class="menu-item">
                         <!-- Mobile menu toggle-->
                         <a class="navbar-toggle" id="isToggle" onclick="toggleMenu()">
@@ -33,25 +36,24 @@
                            
 
                             <li class="has-submenu parent-parent-menu-item">
+
+
                             <a href="javascript:void(0)">انواع الاماكن</a><span class="menu-arrow"></span>
 
                           <ul class="submenu">
-                            <?php 
-
-                            $categories_statement = "SELECT * FROM `categories`";
-                                $categories_query = mysqli_query($conn, $categories_statement) OR die('Error in places'.mysqli_error($conn)) ;
-                                ;
-                            // if(!$places_query){
-                            //     die('Error in places'.mysqli_error($con)) ;
-                            // }else{
-                            //     $places = mysqli_fetch_array($places_query);
-                            // }
-                            while( $category = mysqli_fetch_array($categories_query)){
-                            ?>
-                            <li><a href="places.php?category_id=<?php echo $category['cid'] ?>" class="sub-menu-item"><?php echo $category['type_of_place'] ?></a></a></li>
+                          
                             <?php
-                            }
-                            ?>
+$categories_statement = "SELECT `cid`, `type_of_place_ar` FROM `categories`";
+$categories_query = mysqli_query($conn, $categories_statement) or die('Error in places' . mysqli_error($conn));
+
+while ($category = mysqli_fetch_array($categories_query)) {
+    $category_id = $category['cid'];
+    $category_name = $category['type_of_place_ar'];
+    ?>
+    <li><a href="places.php?category_id=<?php echo $category_id ?>" class="sub-menu-item"><?php echo $category_name ?></a></li>
+<?php
+}
+?>
                              <!-- <li><a href="Co_Working_Places.php" class="sub-menu-item">Co_Working Places</a></li>
                              <li><a href="Adventure_Places.php" class="sub-menu-item">Adventure Places</a></li>
                              <li><a href="Restaurants&Cafes.php" class="sub-menu-item">Restaurants & Cafes</a></li>
