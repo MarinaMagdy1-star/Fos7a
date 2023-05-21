@@ -92,7 +92,6 @@ $place = mysqli_fetch_assoc($result);
 
                                 $query=mysqli_query($conn,"SELECT `rating` FROM `reviews` WHERE 'review_status`= 1'");};
                             ?>    
-                            
                                 <b>Reviews</b>
                                 <div class="star-rating">
                             <input type="radio" id="star5" name="rating" value="5"><label for="star5" title="Excellent"></label>
@@ -107,7 +106,6 @@ $place = mysqli_fetch_assoc($result);
                                 
                                </div>
                     </div><!--end col-->
-
                     </form>
                     
 

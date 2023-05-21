@@ -110,7 +110,6 @@ if (isset($_GET['review'])){
                              <input type="radio" id="star2" name="rating" value="2"><label for="star2" title="Poor"></label>
                              <input type="radio" id="star1" name="rating" value="1"><label for="star1" title="Terrible"></label>
                                 </div>
-                                <textarea name="review" id="review" ></textarea>
                                 <button type="review" id="review" name="review" class="btn btn-dark">Review</button>
                                 
 
