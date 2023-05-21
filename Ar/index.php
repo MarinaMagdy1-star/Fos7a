@@ -22,7 +22,7 @@
                                     <div class="col-lg-12 text-center">
                                         <div class="title-heading mt-4">
                                             <h5 class="text-light title-dark animated fadeInDownBig animation-delay-1">أهلا بك في موقعنا</h5>
-                                            <h1 class="display-1 fw-semibold text-uppercase mb-3 text-white text-shadow-dark-lg title-dark animated fadeInUpBig animation-delay-3">اماكن السياحيه</h1>
+                                            <h1 class="display-1 fw-semibold text-uppercase mb-3 text-white text-shadow-dark-lg title-dark animated fadeInUpBig animation-delay-3">الاماكن السياحيه</h1>
                                             <p class="para-desc text-white-50 para-dark mx-auto animated fadeInUpBig animation-delay-5">الأماكن السياحية هي الأماكن التي يزورها الناس من أجل المتعة والاهتمام ، عادة أثناء وجودهم في عطلة</p>
                                             <div class="mt-4 pt-2 animated fadeInUpBig animation-delay-7">
                                                 <a href="places.php?category_id=1" class="btn btn-font-sm btn-pills-0 btn-lg btn-light text-uppercase mt-2">عرض المزيد</a>
@@ -83,7 +83,7 @@
                                     <div class="col-lg-12 text-center">
                                         <div class="title-heading mt-4">
                                             <h5 class="text-light title-dark animated fadeInDownBig animation-delay-1">مرحبا بكم في ركننا اللذيذ</h5>
-                                            <h1 class="display-1 fw-semibold text-uppercase mb-3 text-white text-shadow-dark-lg title-dark animated fadeInUpBig animation-delay-3">مطاعم وكافيهات</h1>
+                                            <h1 class="display-1 fw-semibold text-uppercase mb-3 text-white text-shadow-dark-lg title-dark animated fadeInUpBig animation-delay-3">المطاعم والكافيهات</h1>
                                             <p class="para-desc text-white-50 para-dark mx-auto animated fadeInUpBig animation-delay-5">تقوم المطاعم والمقاهي بإعداد وتقديم الأطعمة والمشروبات للعملاء. بما في ذلك مجموعة متنوعة من المأكولات ونماذج الخدمة.</p>
                                             <div class="mt-4 pt-2 animated fadeInUpBig animation-delay-7">
                                                 <a href="places.php?category_id=4" class="btn btn-font-sm btn-pills-0 btn-lg btn-light text-uppercase mt-2">عرض المزيد</a>

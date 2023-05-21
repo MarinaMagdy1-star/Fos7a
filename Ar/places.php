@@ -97,7 +97,7 @@
                                 </button
                                 <p class="h5 title text-dark d-block mb-0"><?php echo $place['name'] ?></p>
                                 
-                                <a href="place-details.php?placeid=<?php echo $place['id'] ?>" class="link text-dark">قرائه المزيد <i class="uil uil-arrow-right align-middle"></i></a>
+                                <a href="place-details.php?placeid=<?php echo $place['id'] ?>" class="link text-dark">قراءة المزيد <i class="uil uil-arrow-right align-middle"></i></a>
                             </div>
                             
                             <!-- <div class="center">
