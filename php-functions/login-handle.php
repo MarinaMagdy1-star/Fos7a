@@ -1,5 +1,3 @@
-<?php require_once("connection.php"); ?>
-
 <?php
 
 if (isset($_POST['user_login'])) {
