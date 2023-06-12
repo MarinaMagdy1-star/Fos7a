@@ -145,7 +145,7 @@ if (isset($_GET['review'])){
                         </dl>
                     </div><!--end col-->
 
-                    <div class="col-12">
+                    <!-- <div class="col-12">
                         <div class="mt-5 pt-5 border-top">
                             <ul class="list-unstyled align-items-center social-icon social mb-0">
                                 <li class="list-inline-item me-3">Share :</li>
@@ -156,7 +156,7 @@ if (isset($_GET['review'])){
                                 <li class="list-inline-item"><a href="javascript:void(0)" class="rounded-pill mt-1"><i class="uil uil-dribbble"></i></a></li>
                             </ul>
                         </div>
-                    </div>
+                    </div> -->
                 </div><!--end row-->
             </div><!--end container-->
         </section><!--end section-->

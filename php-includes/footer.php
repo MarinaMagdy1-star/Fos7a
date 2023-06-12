@@ -24,14 +24,14 @@
                                         
                                     </div>
                                 </div>
-                                <div class="col-md-4 d-flex flex-column align-items-center justify-content-center">
+                                <!-- <div class="col-md-4 d-flex flex-column align-items-center justify-content-center">
                                 <ul class="list-unstyled social-icon foot-social-icon mb-0 mt-4">
                                             <li class="list-inline-item"><a href="javascript:void(0)" class="rounded"><i data-feather="facebook" class="fea icon-sm fea-social"></i></a></li>
                                             <li class="list-inline-item"><a href="javascript:void(0)" class="rounded"><i data-feather="instagram" class="fea icon-sm fea-social"></i></a></li>
                                             <li class="list-inline-item"><a href="javascript:void(0)" class="rounded"><i data-feather="twitter" class="fea icon-sm fea-social"></i></a></li>
                                             <li class="list-inline-item"><a href="javascript:void(0)" class="rounded"><i data-feather="linkedin" class="fea icon-sm fea-social"></i></a></li>
                                         </ul><!--end icon-->
-                                </div>
+                                </div> -->
                             </div><!--end row-->
                         </div>
                     </div><!--end col-->
