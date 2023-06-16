@@ -18,7 +18,7 @@
                     
                     if (isset($_GET['category_id'])) {
                         $category_id = $_GET['category_id'];
-                        $select_category = "SELECT `cid`, `type_of_place_ar`,`description_ar` FROM `categories`";
+                        $select_category = "SELECT  * FROM `categories` WHERE cid='$category_id '";
                         $selecy_cate_q = mysqli_query($conn, $select_category) or die('Error in cat'.mysqli_error($conn));
                         $result_cate = mysqli_fetch_array($selecy_cate_q);
 
