@@ -52,7 +52,7 @@
                     
                     ?>
                   
-                    <h4 class="title mb-3"><?= $result_cate['type_of_place_ar'] ?></h4>
+                    <h4 class="title mb-3"><?= $result_cate['Type_of_place_ar'] ?></h4>
                    <b><p class="text-muted para-desc mx-auto mb-0"><?= $result_cate['description_ar'] ?></p></b>
                 </div>
 
