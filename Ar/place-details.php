@@ -41,11 +41,11 @@ $place = mysqli_fetch_assoc($result);
     </div> -->
 
  <!-- Start -->
- <section class="section">
+ <section class="section" dir="ltr">
             <div class="container">
                 <div class="row">
                     <div class="col-12">
-                        <div class="tiny-single-item">
+                        <div class="tiny-single-item" dir="ltr">
                             <?php
                             $images_stat = "SELECT * from `place_images` where place_id='$placeId'";
                             $images_query = mysqli_query($conn, $images_stat) or die('users_error'.mysqli_error());

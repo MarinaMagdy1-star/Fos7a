@@ -1,4 +1,4 @@
-* {
+body {
   direction: rtl;
   text-align: right;
 }
@@ -69,8 +69,4 @@ body.payment {
 
 .placeowner_profile {
   font-family: Copperplate, Papyrus, fantasy;
-}
-
-.tiny-slide {
-  width: 70px;
 }/*# sourceMappingURL=custom-ar.css.map */
