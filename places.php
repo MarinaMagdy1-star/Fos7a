@@ -50,7 +50,7 @@
                     // }
                     ?>
                     <h4 class="title mb-3"><?= $result_cate['type_of_place'] ?></h4>
-                    <p class="text-muted para-desc mx-auto mb-0"><?= $result_cate['description'] ?></p>
+                    <b> <p class="text-muted para-desc mx-auto mb-0"><?= $result_cate['description'] ?> </p></b>
                 </div>
 
 
@@ -81,7 +81,7 @@
                                 
 
                                 <div class="blog-tag">
-                                    <a href="javascript:void(0)" class="badge bg-dark"><?php echo $place['name'] ?></a>
+                                  <a href="javascript:void(0)" class="badge bg-dark"><?php echo $place['name'] ?></a>
                                 </div>
                             </div>
                             
@@ -95,7 +95,7 @@
                                     <path d="M2 15.5a.5.5 0 0 0 .74.439L8 13.069l5.26 2.87A.5.5 0 0 0 14 15.5V2a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v13.5zM8 4.41c1.387-1.425 4.854 1.07 0 4.277C3.146 5.48 6.613 2.986 8 4.412z"/>
                                     </svg>
                                 </button
-                                <p class="h5 title text-dark d-block mb-0"><?php echo $place['name'] ?></p>
+                                <b><p class="h5 title text-dark d-block mb-0"><?php echo $place['name'] ?></p></b>
                                 
                                 <a href="place-details.php?placeid=<?php echo $place['id'] ?>" class="link text-dark">Read More <i class="uil uil-arrow-right align-middle"></i></a>
                             </div>

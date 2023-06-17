@@ -120,14 +120,13 @@ if (isset($_POST['payment_submit'])){
                                         <br><br>
                                         <div class="mb-3">
                                             
-                                            <label class="form-label">Please select your type of payment: <span class="text-danger">*</span></label>
+                                            <label class="form-label">Please select your type of payment: <span class="text-danger"></span></label>
                                             <br>
                                                <select name="type_payment" required> 
-                                                <option value="Orange" selected> Orange Cash</option>
-                                                <option value="Vodafone" > Vodafone Cash</option>
-                                                
-                            
+                                                <option value="Orange" selected> Orange Cash : 01265847135</option>
+                                                <option value="Vodafone" > Vodafone Cash : 01035975124</option>
                                                </select>
+
                                                </div> 
                                     </div><!--end col-->
 
