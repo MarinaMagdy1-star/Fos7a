@@ -49,7 +49,6 @@
                     //     echo '<h4 class="title mb-3">Touristic Places</h4>
                     //         <p class="text-muted para-desc mx-auto mb-0">Touristic Places are places that people visit for pleasure and interest, usually while they are on holiday</p>';
                     // }
-                    
                     ?>
                   
                     <h4 class="title mb-3"><?= $result_cate['Type_of_place_ar'] ?></h4>

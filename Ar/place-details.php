@@ -82,7 +82,7 @@ $place = mysqli_fetch_assoc($result);
                         <div class="section-title me-md-4">
                             <h4 class="title mb-4">وصف المكان</h4>
     
-                            <p class="text-muted"> <?php echo $place ['description_ar']  ?>  .</p>
+                            <p class="text-muted"> <?php echo$place['description_ar']?>.</p>
                             <p class="text-muted mb-0">.</p>
                         </div>
                         <?php
